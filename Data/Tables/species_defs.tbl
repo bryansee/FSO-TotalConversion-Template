@@ -1,0 +1,49 @@
+#SPECIES DEFS
+
+;------------------------
+; GRW
+;------------------------
+$Species_Name:	GRW
+$Default IFF:	Friendly
+$FRED Color:	( 0, 128, 212 )
+	+Debris_Texture:	debris01a
+	+Shield_Hit_ani:	shieldhit01a
+$ThrustAnims:
+	+Pri_Normal:	<none>
+	+Pri_Afterburn:	<none>
+	+Sec_Normal: Thruster02-01
+	+Sec_Afterburn: thruster02-01a
+	+Ter_Normal: thruster03-01
+	+Ter_Afterburn: thruster03-01a
+	+Dist_Normal:	thruster03-01
+	+Dist_Afterburn:	thruster03-01a
+$ThrustGlows:
+	+Normal: thrusterglow01
+	+Afterburn: thrusterglow01
+$AwacsMultiplier: 1.00
+$Countermeasure Type:	GRW CM
+
+;------------------------
+; Ilarhukian
+;------------------------
+$Species_Name:	Ilarhukian
+$Default IFF:	Hostile
+$FRED Color:	( 144, 0, 0 )
+	+Debris_Texture:	debris01a
+	+Shield_Hit_ani:	shieldhit01a
+$ThrustAnims:
+	+Pri_Normal:	<none>
+	+Pri_Afterburn:	<none>
+	+Sec_Normal: Thruster02-02
+	+Sec_Afterburn: thruster02-01a
+	+Ter_Normal: thruster03-01a
+	+Ter_Afterburn: thruster03-01a
+	+Dist_Normal:	thruster03-01
+	+Dist_Afterburn:	thruster03-01a
+$ThrustGlows:
+	+Normal: thrusterglow01
+	+Afterburn: thrusterglow01
+$AwacsMultiplier: 2.00
+$Countermeasure Type:	Ilarhukian CM
+
+#END

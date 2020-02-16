@@ -1,0 +1,19 @@
+<rml>
+	<head>
+		<link type="text/rcss" href="default.rcss"/>
+		<link type="text/rcss" href="common.rcss"/>
+		<link type="text/rcss" href="main.rcss"/>
+		<script>
+			controller = require("main")()
+		</script>
+	</head>
+	<body onload="controller:initialize(document)" onkeydown="controller:global_keydown(element, event)" onunload="controller = nil">
+		<div id=main>
+						<button onclick="controller:btn_pressed()">
+							<span class="neg button_text below">
+								<p>XSTR("Select", -1)</p>
+							</span>
+						</button>
+		</div>
+	</body>
+</rml>

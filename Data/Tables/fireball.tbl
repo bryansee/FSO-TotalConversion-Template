@@ -1,0 +1,26 @@
+; fireball.tbl
+;
+; Table file for specifying which filenames are to be used for which explosions
+;
+;
+#Start
+
+$Name:	Exp_Small						; Used for the 4 little explosions before a ship explodes
+$LOD:		1
+
+$Name:	WarpMap01						; Used for the warp in / warp out effect
+$LOD:		1
+
+$Name:	WarpMap02						; Used for the KNOSSOS warp in / warp out effect
+$LOD:		1
+
+$Name:	Exp_Rock						; Used when an asteroid explodes
+$LOD:		1
+
+$Name:	Exp_Ship_1						; ship explosion 1
+$LOD:		1
+
+$Name:	Exp_Ship_2						; ship explosion 2
+$LOD:		1
+
+#End

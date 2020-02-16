@@ -1,0 +1,114 @@
+;  file to indicate all asteroid types and their physical characteristics
+
+#Asteroid Types
+
+$Name:				Small Asteroid
+$POF file1:			ast03.pof
+$POF file2:			asta03.pof
+$POF file3:			astb03.pof
+$Detail distance:	(0, 30, 80)
+$Max Speed:			60.0
+$Expl inner rad:	0.0
+$Expl outer rad:	0.0
+$Expl damage:		0.0		;; set to zero for no area effect
+$Expl blast:		0.0
+$Hitpoints:			23			;;	Note, modified downward by Skill_level
+
+$Name:				Medium Asteroid
+$POF file1:			ast02.pof
+$POF file2:			asta02.pof
+$POF file3:			astb02.pof
+$Detail distance:	(0, 120, 240)
+$Max Speed:			60.0
+$Expl inner rad:	25.0
+$Expl outer rad:  75.0
+$Expl damage:		20.0		;; set to zero for no area effect
+$Expl blast:      1000.0
+$Hitpoints:			66			;;	Note, modified downward by Skill_level
+
+$Name:				Large Asteroid
+$POF file1:			ast01.pof
+$POF file2:			asta01.pof
+$POF file3:			astb01.pof
+$Detail distance:	(0, 185, 350)
+$Max Speed:			60.0
+$Expl inner rad:	100.0
+$Expl outer rad:	200.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			147		;;	Note, modified downward by Skill_level
+
+;; BEGIN SHIP DEBRIS SECTION
+;; GRW DEBRIS
+$Name:				GRW Debris 1
+$POF file1:			debris01.pof
+$POF file2:			none
+$Detail distance:	(0, 300, 600, 800)
+$Max Speed:			60.0
+$Expl inner rad:	50.0
+$Expl outer rad:	100.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			23		;;	Note, modified downward by Skill_level
+
+$Name:				GRW Debris 2
+$POF file1:			debris01.pof
+$POF file2:			none
+$Detail distance:	(0, 300, 600, 800)
+$Max Speed:			60.0
+$Expl inner rad:	75.0
+$Expl outer rad:	150.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			66		;;	Note, modified downward by Skill_level
+
+$Name:				GRW Debris 3
+$POF file1:			debris01.pof
+$POF file2:			none
+$Detail distance:	(0, 300, 600, 800)
+$Max Speed:			60.0
+$Expl inner rad:	100.0
+$Expl outer rad:	200.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			147		;;	Note, modified downward by Skill_level
+
+;; AUTHORITY DEBRIS
+$Name:				Authority Debris 1
+$POF file1:			debris01.pof
+$POF file2:			none
+$Detail distance:	(0, 300, 600, 800)
+$Max Speed:			60.0
+$Expl inner rad:	100.0
+$Expl outer rad:	200.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			147		;;	Note, modified downward by Skill_level
+
+$Name:				Authority Debris 2
+$POF file1:			debris01.pof
+$POF file2:			none
+$Detail distance:	(0, 300, 600, 800)
+$Max Speed:			60.0
+$Expl inner rad:	100.0
+$Expl outer rad:	200.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			147		;;	Note, modified downward by Skill_level
+
+$Name:				Authority Debris 3
+$POF file1:			debris01.pof
+$POF file2:			none
+$Detail distance:	(0, 300, 600, 800)
+$Max Speed:			60.0
+$Expl inner rad:	100.0
+$Expl outer rad:	200.0
+$Expl damage:		50.0		;; set to zero for no area effect
+$Expl blast:		3000.0
+$Hitpoints:			147		;;	Note, modified downward by Skill_level
+
+
+#End
+
+$Impact Explosion:			ExpMissilehit1		; ani played when laser hits asteroid
+$Impact Explosion Radius:	20.0				; radius that animation will have					

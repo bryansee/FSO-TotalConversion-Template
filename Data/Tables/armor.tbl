@@ -1,0 +1,1438 @@
+#Armor Type
+
+; Only huge flagged weapons can trigger piercing effects when hull reaches 5%. Puncture weapons deal 100% damage. Spawn weapons deal 20% damage. Mainly used for large warships, cruisers and up.
+
+$Name: Heavy Armor 150
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Armor 100
+	$Damage Type: NormalWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Armor 80
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Armor 60
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Armor 40
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Armor 20
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Armor 5
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+
+; All weapons can trigger piercing effects when hull reaches 5%. Puncture weapons deal 100% damage. Spawn weapons deal 20% damage. Mainly used for transports, freighters, etc bigger non-warships.
+
+$Name: Medium Armor 150
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Medium Armor 100
+	$Damage Type: NormalWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Medium Armor 80
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Medium Armor 60
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Medium Armor 40
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Medium Armor 20
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Medium Armor 5
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+
+; All weapons can trigger piercing effects when hull reaches 10%. Mainly used for fighters and bombers. Also useful to protect subsystems and turrets against puncture type weapons.
+
+$Name: Light Armor 150
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Light Armor 100
+	$Damage Type: NormalWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Light Armor 80
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Light Armor 60
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Light Armor 40
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Light Armor 20
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+$Name: Light Armor 5
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+
+; Only huge flagged weapons can trigger piercing effects when hull reaches 5%. Puncture weapons deal 100% damage. Spawn weapons deal 20% damage. Mainly used for large warships, cruisers and up. Shockwaves deal 20% damage.
+
+$Name: Flak Armor 150
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 1.5
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Flak Armor 100
+	$Damage Type: NormalWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Flak Armor 80
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.8
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Flak Armor 60
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.6
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Flak Armor 40
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.4
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Flak Armor 20
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Flak Armor 5
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+;This one is good for turrets as it also reduces anti-subsystem damage
+$Name: Next-Gen Armor 20
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: ShipShockwave
+		+Calculation: Multiplicative
+		+Value: 0.20
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+
+$Name: Next-Gen Armor 5
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: ShipShockwave
+		+Calculation: Multiplicative
+		+Value: 0.05
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+
+; Add special armor classes under this and make sure to comment on their intended use
+
+$Name: HugeWeaponsPierceAt100 ; Armor class where huge weapons trigger piercing effect at 100% hull integrity. Can be used for critical hits.
+	$Damage Type: NormalWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 100
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 100
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+;		+Calculation: Multiplicative
+;		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: HeavyArmor20ExceptBeams
+	$Damage Type: NormalWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: NormalFlak
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SmallBeam
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: HugeBeam
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: Default
+	$Damage Type: PunctureWeapon
+		+Calculation: Multiplicative
+		+Value: 1.0
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: SpawnWeapon
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: ShipShockwaveResistant 20   ; to make ships resistant to other ships exploding
+	$Damage Type: ShipShockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+	$Damage Type: Shockwave
+		+Calculation: Multiplicative
+		+Value: 0.2
+		+Weapon Piercing Effect Start Limit: 5
+		+Weapon Piercing Type: None
+
+$Name: Heavy Shields 150
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Heavy Shields 100
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Heavy Shields 80
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Heavy Shields 60
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Heavy Shields 40
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Heavy Shields 20
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Heavy Shields 5
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.2
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.4
+
+$Name: Medium Shields 150
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Medium Shields 100
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Medium Shields 80
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Medium Shields 60
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Medium Shields 40
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Medium Shields 20
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Medium Shields 5
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.4
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 0.6
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 0.8
+
+$Name: Light Shields 150
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+$Name: Light Shields 100
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+$Name: Light Shields 80
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+$Name: Light Shields 60
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+$Name: Light Shields 40
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+$Name: Light Shields 20
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+$Name: Light Shields 5
+	$Damage Type: SmallBeam
+		+Shield Piercing Percentage: 0.8
+	$Damage Type: MediumBeam
+		+Shield Piercing Percentage: 1
+	$Damage Type: HugeBeam
+		+Shield Piercing Percentage: 1
+
+
+#End

@@ -1,0 +1,48 @@
+#GAME SETTINGS
+
+$Target Version:
++Major: 3
++Minor: 8
++Build: 1
+$Window title: Untitled TC Project
+$Unicode mode: True
+
+#CAMPAIGN SETTINGS
+
+$Default Campaign File Name: Empty
+
+#HUD SETTINGS
+
+$Directive Wait Time: 0
+$Cutscene camera displays HUD: True
+$Full color head animations: True
+
+#SEXP SETTINGS
+
+$Loop SEXPs Then Arguments: True
+$Use Alternate Chaining Behavior: True
+
+#GRAPHICS SETTINGS
+
+$Briefing Window FOV: 0.0
+$Generic Pain Flash Factor: 0.5
+$Shield Pain Flash Factor: 0.2
+$BMPMAN Slot Limit: 19000
+
+#FRED SETTINGS
+
+$Disable Hard Coded Message Head Ani Files: True
+
+#OTHER SETTINGS
+
+$Fixed Turret Collisions: True
+$Damage Impacted Subsystem First: True
+$Default ship select effect: off
+$Default weapon select effect: off
+$Weapons inherit parent collision group: True
+$Flight controls follow eyepoint orientation: True
+$Beams Use Damage Factors: True
+
+$Enable in-game options: Yes
+
+#END

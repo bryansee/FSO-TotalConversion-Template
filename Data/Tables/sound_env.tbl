@@ -1,0 +1,40 @@
+#Sound Environments Start
+
+; All options with default values and ranges
+$Name: EFX Defaults
++Density: 1.0						; range: 0.0 - 1.0
++Diffusion: 1.0					; linear multiplier, range: 0.0 - 1.0
++Gain: 0.32						; gain/volume, linear gain, range: 0.0 - 1.0
++Gain HF: 0.89						; high frequency gain, linear gain, range: 0.0 - 1.0
++Gain LF: 0.0						; low frequency gain, linear gain, range: 0.0 - 1.0
++Decay Time: 1.49					; decay, seconds, range: 0.1 - 20.0
++Decay HF Ratio: 0.83				; high frequency decay multiplier (damping), linear multiplier, range: 0.1 - 20.0
++Decay LF Ratio: 1.0				; low frequency decay multiplier, linear multiplier, range: 0.1 - 20.0
++Reflections Gain: 0.05				; linear gain, range: 0.0 - 3.16
++Reflections Delay: 0.007			; seconds, range: 0.0 - 0.3
++Reflections Pan: 0.0, 0.0, 0.0		; vector, magnitude, range(s): 0.0 - 1.0
++Late Reverb Gain: 1.26				; linear gain, range: 0.0 - 10.0
++Late Reverb Delay: 0.011			; seconds, range: 0.0 - 0.1
++Late Reverb Pan: 0.0, 0.0, 0.0		; vector, magnitude, range(s): 0.0 - 1.0
++Echo Time: 0.25					; seconds, range: 0.075 - 0.25
++Echo Depth: 0.0					; linear multiplier, range: 0.0 - 1.0
++Modulation Time: 0.25				; seconds, range: 0.004 - 4.0
++Modulation Depth: 0.0				; linear multiplier, range: 0.0 - 1.0
++HF Reference: 5000.0				; Hz, range: 1000.0 - 20000.0
++LF Reference: 250.0				; Hz, range: 20.0 - 1000.0 (should be 1/10th or less of HF Reference value)
++Room Rolloff Factor: 0.0			; linear multiplier, range: 0.0 - 10.0
++Air Absorption Gain HF: 0.994		; linear gain per meter, range: 0.892 - 1.0
++Decay HF Limit: true				; boolean
+
+; Set up an environment for subspace missions based on the EAX 'Drugged' effect
+$Name: Subspace
+$Template: Drugged
++Gain: 0.8
++Decay HF Ratio: 1.188
++Decay Time: 6.392
+
+; Set the default environment to the EAX 'Hangar' effect
+$Name: Default
+$Template: None
+
+#Sound Environments End

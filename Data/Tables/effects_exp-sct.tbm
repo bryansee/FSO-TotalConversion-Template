@@ -1,0 +1,1016 @@
+#Conditional Hooks
+
+$Application: FS2_Open
+
+$On Game Init:
+[
+   if not mediavps then
+      mediavps = {}
+   end
+   if mediavps then
+      if not mediavps.explosionsOverride then
+         mediavps.explosionsOverride = false
+         ba.print("MediaVPs: Explosions script loaded!\n")
+      end
+   end
+]
+
+$On Mission Start:
+[
+if not mediavps.explosionsOverride then
+   -- parser functions
+
+   -- get newline and make sure its lowercase
+   function get_next_line(nfile)
+      -- read the line
+      nline = nfile:read("*l")
+      -- change to lowercase
+      if nline ~= nil then
+        nline = nline:lower()
+      end
+      return nline
+   end
+
+   -- find keyword and return the place where it ends
+   function find_keyword(line_to_parse, keyword)
+      -- If the passed line is invalid, bail
+      if not line_to_parse then
+        return nil
+      end
+      -- find any instances of the keyword
+      keyword = keyword:lower()
+      local key_s, key_e = line_to_parse:find(keyword)
+
+      -- if we cant find a thing
+      if key_s == nil then
+        return nil
+      end
+
+      -- check if the line has been commented away
+      local comment_s, comment_e = line_to_parse:find("--")
+
+      if comment_s == nil then
+        return key_e
+      elseif comment_s < key_s then
+          return nil
+      end
+
+      return key_e
+   end
+
+   -- function to initialize the vars
+   function init_entry(name, filetype)
+      if filetype == 1 then
+        arr_SD_rad[name] = 1
+        arr_SD_eff[name] = { }
+        arr_SD_m[name] = 1
+        arr_SF_rad[name] = 1
+        arr_SF_eff[name] = 0
+        arr_SB_int[name] = 0
+        arr_SB_dur[name] = 0
+        arr_SB_time[name] = 0
+        arr_SB_dist[name] = 1
+      elseif filetype == 2 then
+        arr_WF_rad[name] = 1
+        arr_WF_eff[name] = 0
+        arr_WB_int[name] = 0
+        arr_WB_dur[name] = 0
+        arr_WB_dist[name] = 1
+      else
+        ba.warning("BAD FILETYPE")
+      end
+   end
+
+   -- specific parsing funcs to make things easier to read
+   -- string or rather substring parser
+   function parse_string(start_key, line_to_parse)
+      local substring = line_to_parse:sub(start_key)
+      -- remove empty spaces
+      local substring_start = substring:find("%a")
+      substring = substring:sub(substring_start)
+      return substring
+   end
+
+   -- function to parse numbers
+   function parse_number(start_key, line_to_parse)
+      local result = line_to_parse:sub(start_key)
+      local r_value = result:match('[0-9%.]+')
+      r_value = tonumber(r_value)
+      return r_value
+   end
+
+   -- function to parse arrays of numbers
+   function parse_number_array(start_key, line_to_parse)
+      -- stuff the array
+      local r = { }
+      local p
+      for p in line_to_parse:gmatch('[0-9%.]+') do
+        p = tonumber(p)
+        p = math.floor(p)
+        table.insert(r, p)
+      end
+      return r
+   end
+
+   -- function to parse things
+   function parse_entry(keyword, flashfile, type, use_same_line)
+      local new_entry = nil
+      local return_val
+      local return_array = {}
+      local c_line
+      if use_same_line == false then
+        c_line = get_next_line(flashfile)
+        if c_line == nil then
+          -- end of file
+          return -2, false, return_array
+        end
+        while c_line:len() == 0 do
+          c_line = get_next_line(flashfile)
+          if c_line == nil then
+            -- end of file
+            return -2, false, return_array
+          end
+        end
+        new_entry = find_keyword(c_line, "Name:")
+        current_start_line = c_line
+      else
+        c_line = use_same_line
+      end
+
+      -- check if we found a new entry
+      if new_entry == nil then
+        local c_key = find_keyword(c_line, keyword)
+        if c_key == nil then
+          -- we didn't find the thing...
+          return -1, c_line, return_array
+        end
+        if type == "n" then
+          -- soo... parse a number
+          return_val = parse_number(c_key, c_line)
+          return return_val, false, return_array
+        elseif type == "array_n" then
+          -- soo... parse an array of numbers
+          return_array = parse_number_array(c_key, c_line)
+          return_val = #return_array
+          return return_val, false, return_array
+        end
+      else
+        -- found new entry instead...
+        return -2, c_line, return_array
+      end
+   end
+
+   -- loading the flash animations
+   function parse_flash_ani_file(n_file)
+      local something_to_parse = true
+      while something_to_parse == true do
+        local c_line = get_next_line(n_file)
+
+        -- if we are at end of file, stop the loop
+        if c_line == nil then
+          something_to_parse = false
+          break
+        end
+
+        local entry_start = find_keyword(c_line, "Filename:")
+
+        -- if we found something else, try next line
+        if entry_start ~= nil then
+          -- ok... so we should have a good entry candidate and all that
+          local current_entry = parse_string(entry_start, c_line)
+          local animation = gr.loadTexture(current_entry, true)
+          table.insert(arr_D_eff, animation)
+          if animation:isValid() == false then
+            ba.warning("Animation defined as " .. current_entry .. " is invalid")
+          end
+        end
+      end
+   end
+
+   -- actual flash effect parsing function
+   function parse_flash_file(flashfile, filetype)
+      -- pick first line
+      entries_left = true
+      use_same_line = false
+      while entries_left == true do
+        -- find ship name
+        if use_same_line == false then
+          use_same_line = get_next_line(flashfile)
+        end
+        if use_same_line == nil then
+          -- end of file
+          entries_left = false
+          break
+        end
+        if use_same_line:len() == 0 then
+          use_same_line = false
+        else
+          entry_start = find_keyword(use_same_line, "Name:")
+          current_start_line = use_same_line
+          if entry_start ~= nil then
+            local not_new_entry = false
+            -- insert while loop here to enable breaks as next statements
+            while entry_start ~= nil do
+               if not_new_entry == false then
+                 current_entry = parse_string(entry_start, use_same_line)
+                 -- init the entry
+                 init_entry(current_entry, filetype)
+                 use_same_line = false
+                 ba.print("\nClass: " .. current_entry .. "\n")
+               end
+
+               local temp_val = nil
+               local temp_arr = nil
+               entry_start = nil
+
+               -- ship detonation flash, explosion and blinding data
+               if filetype == 1 then
+
+                 -- detonation radius
+                 temp_val, use_same_line = parse_entry("Detonation Radius Multiplier:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("DRM: " .. temp_val .. "\n")
+                   arr_SD_rad[current_entry] = temp_val
+                 end
+
+                 -- random detonation effects
+                 local temp_arr = {}
+                 temp_val, use_same_line, temp_arr = parse_entry("Detonation Effects:", flashfile, "array_n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("DE: " .. temp_val .. "\n")
+                   arr_SD_eff[current_entry] = temp_arr
+                 end
+
+                 -- multiplier for the detonation occurrance
+                 temp_val, use_same_line = parse_entry("Detonation Multiplier:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("DM: " .. temp_val .. "\n")
+                   arr_SD_m[current_entry] = temp_val
+                 end
+
+                 -- final flash radius
+                 temp_val, use_same_line = parse_entry("Flash Radius Multiplier:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("FRM: " .. temp_val .. "\n")
+                   arr_SF_rad[current_entry] = temp_val
+                 end
+
+                 -- flash effect
+                 temp_val, use_same_line = parse_entry("Flash Effect:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("FE: " .. temp_val .. "\n")
+                   math.floor(temp_val)
+                   arr_SF_eff[current_entry] = temp_val
+                 end
+
+                 -- blinding effect
+                 temp_val, use_same_line = parse_entry("Blinding Effect Intensity:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BE: " .. temp_val .. "\n")
+                   temp_val = temp_val + "0"
+                   if temp_val < 0 then
+                     temp_val = 0
+                   elseif temp_val > 100 then
+                     temp_val = 100
+                   end
+                   arr_SB_int[current_entry] = temp_val
+                 end
+
+                 -- blinding duration
+                 temp_val, use_same_line = parse_entry("Blinding Effect Duration:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BEDu: " .. temp_val .. "\n")
+                   arr_SB_dur[current_entry] = temp_val
+                 end
+
+                 -- blast effect delay
+                 temp_val, use_same_line = parse_entry("Blast Effect Delay:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BEDe: " .. temp_val .. "\n")
+                   arr_SB_time[current_entry] = temp_val
+                 end
+
+                 -- blast effect delay
+                 temp_val, use_same_line = parse_entry("Blinding Effect Distance Multiplier:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BEDM: " .. temp_val .. "\n")
+                   arr_SB_dist[current_entry] = temp_val
+                 end
+
+               -- ok so here we are parsing weapon flash/blinding data
+               elseif filetype == 2 then
+                 -- final flash radius
+                 temp_val, use_same_line = parse_entry("Flash Radius:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("FR: " .. temp_val .. "\n")
+                   arr_WF_rad[current_entry] = temp_val
+                 end
+
+                 -- flash effect
+                 temp_val, use_same_line = parse_entry("Flash Effect:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("FE: " .. temp_val .. "\n")
+                   math.floor(temp_val)
+                   arr_WF_eff[current_entry] = temp_val
+                 end
+
+                 -- blinding effect
+                 temp_val, use_same_line = parse_entry("Blinding Effect Intensity:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BEI: " .. temp_val .. "\n")
+                   temp_val = temp_val + "0"
+                   if temp_val < 0 then
+                     temp_val = 0
+                   elseif temp_val > 100 then
+                     temp_val = 100
+                   end
+                   arr_WB_int[current_entry] = temp_val
+                 end
+
+                 -- blinding duration
+                 temp_val, use_same_line = parse_entry("Blinding Effect Duration:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BEDu: " .. temp_val .. "\n")
+                   arr_WB_dur[current_entry] = temp_val
+                 end
+
+                 -- blast effect delay
+                 temp_val, use_same_line = parse_entry("Blinding Effect Distance:", flashfile, "n", use_same_line)
+                 if temp_val == -2 then
+                   break
+                 elseif temp_val ~= -1 then
+                   ba.print("BEDi: " .. temp_val .. "\n")
+                   arr_WB_dist[current_entry] = temp_val
+                 end
+               else
+                 ba.warning("BAD FILETYPE")
+               end
+
+               if current_start_line == use_same_line then
+                 use_same_line = get_next_line(flashfile)
+                 local temp_string = find_keyword(use_same_line, "Name:")
+                 if temp_string == nil then
+                   current_start_line = use_same_line
+                   entry_start = use_same_line
+                 else
+                   entry_start = nil
+                 end
+
+                 not_new_entry = true
+               end
+            end
+          else
+            use_same_line = get_next_line(flashfile)
+          end
+        end
+      end
+   end
+
+   function parse_file(filename, type)
+      -- type 1 is ship effect file
+      -- type 2 is weapon effect file
+      -- type 3 is animation file
+      if (cf.fileExists(filename, "data/config/", true) == true) then
+        --ba.warning("1 " .. filename .. ", " .. type)
+        flashfile = cf.openFile(filename, "r")
+        --ba.warning("2 " .. filename .. ", " .. type)
+        if type < 3 then
+          --ba.warning("3 " .. filename .. ", " .. type)
+          parse_flash_file(flashfile, type)
+          --ba.warning("4 " .. filename .. ", " .. type)
+        else
+          --ba.warning("5 " .. filename .. ", " .. type)
+          parse_flash_ani_file(flashfile)
+        end
+        --ba.warning("6 " .. filename .. ", " .. type)
+        flashfile:close()
+      else
+        ba.print("SCRIPTING: Failed to load flashy deaths scripts " .. filename .. " file\n")
+        return false
+      end
+
+      return true
+   end
+
+
+   -- main
+
+   -- init arrays
+   arrayShipName = {}
+   arr_SD_rad = {}
+   arr_SD_eff = {}
+   arr_SD_m = {}
+   arr_SF_rad = {}
+   arr_SF_eff = {}
+   arr_SB_int = {}
+   arr_SB_dur = {}
+   arr_SB_time = {}
+   arr_SB_dist = {}
+   arr_D_eff = {}
+
+   arr_WF_rad = {}
+   arr_WF_eff = {}
+   arr_WB_int = {}
+   arr_WB_dur = {}
+   arr_WB_dist = {}
+
+   ba.print("SCRIPTING: Starting flashy deaths script loading\n")
+
+   -- open reference file, if any
+   -- if failed... pass the script
+   boolflashfileOK = parse_file("mv_shp_exp_flashes.cfg", 1)
+   boolweaponflashfileOK = parse_file("mv_wep_exp_flashes.cfg", 2)
+   boolflashanifileOK = parse_file("mv_exp_ani_flashes.cfg", 3)
+
+   if (boolflashfileOK or boolweaponflashfileOK) then
+      -- setup rest of the required stuff
+      math.randomseed( os.time() )
+      f_counter = {}
+      v_null = ba.createVector(0,0,0)
+      v_temp = ba.createVector(0,0,0)
+      v_rnd_sphere = ba.createVector(0,0,0)
+      arr_FS_List = {}
+      arr_FS = {}
+      arr_FS_Class = {}
+      arr_FS_Pos = {}
+      arr_FS_done = {}
+      arr_FS_time = {}
+      bl_int = 0
+      bl_end = 0
+      bl_max = 0
+      bl_start = 0
+      bl_int_init = 0
+   end
+
+
+   -- functions for later sections
+
+   function blinding_effect(intensity, duration, time)
+      bl_int_init = bl_int
+
+      -- if intensity is too low dont do the effect
+      if intensity > 0.05 then
+        if (intensity <= bl_max) then
+          if intensity >= bl_int then
+            local effect_time = bl_end - bl_start
+            local delta_time = time - bl_start
+
+            if effect_time == 0 then
+               bl_max = intensity
+               bl_start = time
+               bl_end = time + (duration / 1000)
+            else
+               local pct_time = (effect_time - delta_time) / effect_time
+               if pct_time < 0.85 then
+                 bl_max = intensity
+                 bl_start = time
+                 bl_end = time + (duration / 1000)
+               end
+            end
+          end
+        else
+          bl_max = intensity
+          bl_start = time
+          bl_end = time + (duration / 1000)
+        end
+      end
+   end
+
+   function process_blinding_effect_frame(time)
+      if bl_max == 0 then
+        return
+      end
+
+      local effect_time = bl_end - bl_start
+      local delta_time = time - bl_start
+      local pct_time = (effect_time - delta_time) / effect_time
+      local case_time
+
+      -- lets go case by case
+      if pct_time < 0.0 then
+        -- effect has faded away
+        bl_int = 0
+        bl_max = 0
+      elseif pct_time < 0.85 then
+        -- effect is still fading away
+        case_time = 1 - (pct_time / 0.85)
+        bl_int = bl_max * math.pow(((1 + math.cos(case_time * math.pi))/2),3)
+      elseif pct_time > 0.90 then
+        -- effect is still getting stronger
+        if pct_time == 0 then
+          case_time = -1
+        else
+          case_time = -1 * ((pct_time - 0.9) / 0.1)
+        end
+        bl_int = math.pow(((1 + math.cos(case_time * math.pi))/2),2) * (bl_max - bl_int_init) + bl_int_init
+      else
+        bl_int = bl_max
+      end
+
+      if bl_int ~= 0 then
+        a = bl_int * 255
+        gr.flashScreen(a,a,a)
+      end
+   end
+
+   function do_death_flash(name, number)
+
+      -- death flash explosion
+      arr_FS_List[name] = 2
+      local v_F_pos = arr_FS_Pos[name]
+      arr_FS_Pos[name] = nil
+      local str_F_class = arr_FS_Class[name]
+      arr_FS_Class[name] = nil
+      local l_f_model_r = tb.ShipClasses[str_F_class].Model.Radius
+
+      if (arr_SF_eff[str_F_class] > 0) and boolflashanifileOK then
+        local n_F_rad = 1.5 * (math.random() + 0.5) * l_f_model_r * arr_SF_rad[str_F_class]
+        local l_anim_flash = arr_D_eff[arr_SF_eff[str_F_class]]
+        if l_anim_flash:isValid() then
+          ts.createParticle(v_F_pos,v_null,f_F_time,n_F_rad,PARTICLE_BITMAP,-1,false,l_anim_flash)
+        end
+      end
+
+      -- death flash blinding effect
+      if arr_SB_int[str_F_class] > 0 then
+        local coord_x
+        local coord_y
+        coord_x, coord_y = v_F_pos:getScreenCoords()
+
+        if coord_x ~= false then
+          if coord_x >= 0 and coord_y >= 0 and coord_x <= gr.getScreenWidth() and coord_y <= gr.getScreenHeight() then
+            local l_f_dist_mult = 1
+            local l_player = hv.Player
+            if l_player:isValid() then
+               local l_v_plr_pos
+               if #gr.Cameras > 0 then
+                 l_v_plr_pos = gr.Cameras[1].Position
+               else
+                 l_v_plr_pos = l_player.Position
+               end
+               l_v_plr_pos = l_player.Position
+               local l_n_distace_fls_plr = v_F_pos:getDistance(l_v_plr_pos)
+               local l_n_max_fls_distance = 2 * l_f_model_r * arr_SB_dist[str_F_class]
+               if l_n_distace_fls_plr > l_n_max_fls_distance then
+                 local l_n_exp_dist_mult = l_n_distace_fls_plr / l_n_max_fls_distance
+                 l_f_dist_mult = 1 / math.pow(l_n_exp_dist_mult, 4)
+               end
+               blinding_effect(arr_SB_int[str_F_class] * l_f_dist_mult, arr_SB_dur[str_F_class], f_M_time)
+            end
+          end
+        end
+      end
+
+      -- purge from the list
+      table.insert(arr_FS_done, number)
+   end
+
+   function do_weapon_flash(weapon)
+
+      local class = weapon.Class.Name:lower()
+
+      if arr_WF_eff[class] == nil then
+        return
+      end
+
+      -- flash effect
+      if (arr_WF_eff[class] > 0) and boolflashanifileOK then
+        local v_F_pos = weapon.Position
+        local n_F_rad = (math.random() + 0.5) * arr_WF_rad[class]
+        local l_anim_flash = arr_D_eff[arr_WF_eff[class]]
+        if l_anim_flash:isValid() then
+          ts.createParticle(v_F_pos,v_null,f_F_time,n_F_rad,PARTICLE_BITMAP,-1,false,l_anim_flash)
+        end
+      end
+
+      -- blinding effect
+      if arr_WB_int[class] > 0 then
+        local v_F_pos = weapon.Position
+        local coord_x
+        local coord_y
+        coord_x, coord_y = v_F_pos:getScreenCoords()
+
+        if coord_x ~= false then
+          if coord_x >= 0 and coord_y >= 0 and coord_x <= gr.getScreenWidth() and coord_y <= gr.getScreenHeight() then
+            local l_f_dist_mult = 1
+            local l_player = hv.Player
+            if l_player:isValid() then
+               local l_v_plr_pos
+               if #gr.Cameras > 0 then
+                 l_v_plr_pos = gr.Cameras[1].Position
+               else
+                 l_v_plr_pos = l_player.Position
+               end
+               l_v_plr_pos = l_player.Position
+               local l_n_distace_fls_plr = v_F_pos:getDistance(l_v_plr_pos)
+               local l_n_max_fls_distance = arr_WB_dist[class]
+               if l_n_distace_fls_plr > l_n_max_fls_distance then
+                 local l_n_exp_dist_mult = l_n_distace_fls_plr / l_n_max_fls_distance
+                 l_f_dist_mult = 1 / math.pow(l_n_exp_dist_mult, 4)
+               end
+               blinding_effect(arr_WB_int[class] * l_f_dist_mult, arr_WB_dur[class], f_M_time)
+            end
+          end
+        end
+      end
+   end
+
+   function do_beam_flash(weapon, n_collisions)
+
+      local class = weapon.Class.Name:lower()
+
+      if arr_WF_eff[class] == nil then
+        return
+      end
+
+      for i = 1, n_collisions do
+        -- flash effect
+        if (arr_WF_eff[class] > 0) and boolflashanifileOK then
+          local v_F_pos = weapon:getCollisionPosition(i)
+          local n_F_rad = (math.random() + 0.5) * arr_WF_rad[class]
+          local l_anim_flash = arr_D_eff[arr_WF_eff[class]]
+          if l_anim_flash:isValid() then
+            ts.createParticle(v_F_pos,v_null,f_F_time,n_F_rad,PARTICLE_BITMAP,-1,false,l_anim_flash)
+          end
+        end
+
+        -- blinding effect
+        if arr_WB_int[class] > 0 then
+          local v_F_pos = weapon:getCollisionPosition(i)
+          local coord_x
+          local coord_y
+          coord_x, coord_y = v_F_pos:getScreenCoords()
+
+          if coord_x ~= false then
+            if coord_x >= 0 and coord_y >= 0 and coord_x <= gr.getScreenWidth() and coord_y <= gr.getScreenHeight() then
+               local l_f_dist_mult = 1
+               local l_player = hv.Player
+               if l_player:isValid() then
+                 local l_v_plr_pos
+                 if #gr.Cameras > 0 then
+                   l_v_plr_pos = gr.Cameras[1].Position
+                 else
+                   l_v_plr_pos = l_player.Position
+                 end
+                 l_v_plr_pos = l_player.Position
+                 local l_n_distace_fls_plr = v_F_pos:getDistance(l_v_plr_pos)
+                 local l_n_max_fls_distance = arr_WB_dist[class]
+                 if l_n_distace_fls_plr > l_n_max_fls_distance then
+                   local l_n_exp_dist_mult = l_n_distace_fls_plr / l_n_max_fls_distance
+                   l_f_dist_mult = 1 / math.pow(l_n_exp_dist_mult, 4)
+                 end
+                 blinding_effect(arr_WB_int[class] * l_f_dist_mult, arr_WB_dur[class], f_M_time)
+               end
+            end
+          end
+        end
+      end
+   end
+
+   function check_flash(name)
+      local class = arr_FS_Class[name]
+      if arr_SB_time[class] > 0 then
+        if arr_FS_time[name] <= f_M_time then
+          return true;
+        end
+      end
+
+      return false;
+   end
+
+   function add_to_flash_list(name, class)
+      arr_FS_List[name] = 1
+      arr_FS_Class[name] = class
+      if arr_SB_time[class] > 0 then
+        local temp_time = math.random() + 1
+        arr_FS_time[name] = arr_SB_time[class] * temp_time / 1000 + f_M_time
+      end
+      table.insert(arr_FS,name)
+   end
+
+   function get_rnd_vector_sphere()
+      local l_bool_ok_to_pass = false
+      local l_get_rnd = math.random
+
+      while (l_bool_ok_to_pass == false) do
+
+        -- get random vector (cube, -1 to 1)
+        v_rnd_sphere[1] = (2* (l_get_rnd() - 0.5))
+        v_rnd_sphere[2] = (2* (l_get_rnd() - 0.5))
+        v_rnd_sphere[3] = (2* (l_get_rnd() - 0.5))
+        local l_n_mag = v_rnd_sphere:getMagnitude()
+
+        -- accept only values within a sphere (uniform)
+        if l_n_mag <= 1 then
+          v_rnd_sphere = v_rnd_sphere / l_n_mag
+          l_bool_ok_to_pass = true
+        end
+      end
+      return v_rnd_sphere;
+   end
+
+   function get_ray_collision_pos(ship, v_ray, num_tries)
+      local l_or_ship = ship.Orientation
+      local l_m_model = ship.Class.Model
+      local l_f_radius = 30000
+      local l_v_pos_mod = v_null
+      local l_n_has_tried = 0
+      local l_c_ray_pos
+      local l_get_rnd = math.random
+
+      while (l_n_has_tried < num_tries) do
+        if l_m_model:isValid() then
+          l_f_radius = l_m_model.Radius
+          for i=1,3 do
+            local l_rnd = (2* (l_get_rnd() - 0.5))
+               if l_rnd >= 0 then
+                 v_temp[i] = l_m_model.BoundingBoxMax[i] * l_rnd
+               else
+                 v_temp[i] = l_m_model.BoundingBoxMin[i] * l_rnd * (-1)
+               end
+            end
+          l_v_pos_mod = l_or_ship:unrotateVector(v_temp)
+        else
+          l_v_pos_mod = v_null
+        end
+
+        local v_ray = v_ray * l_f_radius
+        local l_v_end_pos = ship.Position - v_ray + l_v_pos_mod
+        local l_v_start_pos = ship.Position + v_ray + l_v_pos_mod
+
+        l_c_ray_pos = ship:checkRayCollision(l_v_start_pos, l_v_end_pos)
+
+        if l_c_ray_pos ~= nil then
+          l_n_has_tried = 3
+        else
+          l_n_has_tried = 1 + l_n_has_tried
+        end
+      end
+
+      return l_c_ray_pos
+   end
+
+   function get_number_of_explosions(attempts)
+      local l_n_partials
+      local l_n_full
+      l_n_full, l_n_partials = math.modf(attempts)
+
+      if l_n_partials ~= 0 then
+        if math.random() > l_n_partials then
+          l_n_full = l_n_full + 1
+        end
+      end
+
+      return l_n_full
+   end
+
+   function check_and_do_death_flash()
+      n_FS = #arr_FS
+
+      for x=1,n_FS do
+        name = arr_FS[x]
+
+        if arr_FS_List[name] == 1 then
+
+          if mn.Ships[name]:isValid() then
+            if mn.Ships[name]:hasShipExploded() == 2 then
+               do_death_flash(name, x)
+            else
+               -- randomized flash explosion
+               if check_flash(name) == true then
+                 do_death_flash(name, x)
+               end
+            end
+          end
+        end
+      end
+   end
+
+   function check_and_clear_flash_array()
+      n_FS_done = #arr_FS_done
+
+      if n_FS_done > 0 then
+
+        for o=n_FS_done,1,-1 do
+          table.remove(arr_FS,arr_FS_done[o])
+        end
+
+        arr_FS_done = nil
+        arr_FS_done = {}
+      end
+   end
+
+   function do_small_explosion_effects(l_n_SD_eff,o_ship,str_S_class)
+      local l_bool_ok_to_pass = false
+      local l_v_rnd = get_rnd_vector_sphere()
+      local l_c_pos = get_ray_collision_pos(o_ship, l_v_rnd, 3)
+
+      -- check if the ray actually hit anything even after three tries
+      if l_c_pos ~= nil then
+        local l_m_model = o_ship.Class.Model
+        local l_f_det_r = (2* math.random() + 0.5) * l_m_model.Radius * arr_SD_rad[str_S_class] * 0.1
+        local l_arr_SD_eff = arr_SD_eff[str_S_class]
+        if l_n_SD_eff == 1 then
+          local l_anim_det = arr_D_eff[l_arr_SD_eff[1]]
+          if l_anim_det:isValid() then
+            ts.createParticle(l_c_pos,v_null,f_F_time,l_f_det_r,PARTICLE_BITMAP,-1,false,l_anim_det)
+          end
+        elseif l_n_SD_eff > 1 then
+          local l_n_rnd_id = math.random(l_n_SD_eff)
+          local l_anim_det = arr_D_eff[l_arr_SD_eff[l_n_rnd_id]]
+          if l_anim_det:isValid() then
+            ts.createParticle(l_c_pos,v_null,f_F_time,l_f_det_r,PARTICLE_BITMAP,-1,false,l_anim_det)
+          end
+        end
+      end
+   end
+
+   function maybe_add_to_flash_list(o_ship,str_S_class,str_S_name)
+      if arr_SF_rad[str_S_class] > 0 then
+        if arr_FS_List[str_S_name] == nil then
+          add_to_flash_list(str_S_name, str_S_class)
+          arr_FS_Pos[str_S_name] = o_ship.Position
+        end
+      end
+   end
+
+   function maybe_draw_explosion_effects(o_ship,str_S_class,str_S_name)
+      if (arr_SD_rad[str_S_class] > 0) and boolflashanifileOK then
+
+        if f_counter[str_S_name] == nil then
+          f_counter[str_S_name] = 0
+
+        end
+
+        f_rnd = math.random()
+        local l_n_SD_eff = #arr_SD_eff[str_S_class]
+
+        while f_counter[str_S_name] > f_rnd do
+          f_counter[str_S_name] = f_counter[str_S_name] - f_rnd
+          local n_attempts = get_number_of_explosions(arr_SD_m[str_S_class])
+
+          for n = 1,n_attempts do
+            do_small_explosion_effects(l_n_SD_eff,o_ship,str_S_class)
+          end
+
+          if f_counter[str_S_name] <= 0 then
+            f_counter[str_S_name] = 0
+          else
+            f_rnd = math.random()
+          end
+        end
+
+        f_counter[str_S_name] = f_counter[str_S_name] + f_F_time
+      end
+   end
+
+   function process_explosion_effects()
+      f_rnd = math.random()
+      n_ships = #mn.Ships
+
+      for h = 1, n_ships do
+        o_ship = mn.Ships[h]
+        str_S_class = o_ship.Class.Name:lower()
+
+        -- ONLY SHIPS WITH EFFECTS
+
+        if ((arr_SF_rad[str_S_class] ~= nil) or (arr_SD_rad[str_S_class] ~= nil)) then
+          str_S_name = o_ship.Name
+          local ship_status = o_ship:hasShipExploded()
+
+          if ship_status > 0 then
+            maybe_add_to_flash_list(o_ship,str_S_class,str_S_name)
+
+            if ship_status ~= 2 then
+               maybe_draw_explosion_effects(o_ship,str_S_class,str_S_name)
+            end
+          end
+        end
+      end
+   end
+
+   function check_beam_effects()
+      local n_beams = #mn.Beams
+
+      for h = 1, n_beams do
+        local o_beams = mn.Beams[h]
+        local n_collisions = o_beams:getCollisionCount()
+
+        if n_collisions > 0 then
+          do_beam_flash(o_beams, n_collisions)
+        end
+      end
+   end
+else
+   ba.print("MediaVPs: Explosions script override active!\n")
+end
+]
+
+$State: GS_STATE_GAME_PLAY
+$On Frame:
+[
+if not mediavps.explosionsOverride then
+   f_M_time = mn.getMissionTime()
+   f_F_time = ba.getFrametime(true)
+
+   if (f_M_time ~= nil) then
+
+      if boolflashfileOK then
+        process_explosion_effects()
+        check_and_do_death_flash()
+        check_and_clear_flash_array()
+      end
+
+      if boolweaponflashfileOK then
+        check_beam_effects()
+      end
+
+      if (boolflashfileOK or boolweaponflashfileOK) then
+        process_blinding_effect_frame(f_M_time)
+      end
+
+   end
+end
+
+]
+
+$State: GS_STATE_GAME_PLAY
+$On Weapon Delete:
+[
+if not mediavps.explosionsOverride then
+   if ((f_M_time ~= nil) and boolweaponflashfileOK) then
+      wep = hv.Weapon
+      do_weapon_flash(wep)
+   end
+end
+
+]
+
+$Application: FS2_Open
+$On Mission End:
+[
+if not mediavps.explosionsOverride then
+   -- kill the arrays...
+   if (boolflashfileOK or boolweaponflashfileOK)  then
+      arrayShipName = nil
+      arr_SD_rad = nil
+      arr_SD_eff = nil
+      arr_SF_rad = nil
+      arr_SF_eff = nil
+      arr_SB_int = nil
+      arr_SB_dur = nil
+      arr_SB_time = nil
+
+      arr_WF_rad = nil
+      arr_WF_eff = nil
+      arr_WB_int = nil
+      arr_WB_dur = nil
+
+      local n_effects = #arr_D_eff
+      for j=1,n_effects do
+        arr_D_eff[j]:unload()
+      end
+      arr_D_eff = nil
+
+      f_counter = nil
+      arr_FS_List = nil
+      arr_FS = nil
+      arr_FS_Class = nil
+      arr_FS_Pos = nil
+      arr_FS_done = nil
+      arr_FS_time = nil
+
+      boolflashfileOK = nil
+      boolweaponflashfileOK = nil
+      boolflashanifileOK = nil
+   end
+end
+]
+
+#End

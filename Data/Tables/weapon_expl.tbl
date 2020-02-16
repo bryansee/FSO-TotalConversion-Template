@@ -1,0 +1,29 @@
+; weapon_expl.tbl
+;
+; Table file for specifying which filenames are to be used for which explosions
+;
+;
+#Start
+
+$Name: noeffect
+$LOD: 1
+
+$Name: Exp_Small
+$LOD: 1
+
+$Name: Exp_Ship_1
+$LOD: 1
+
+$Name: Exp_Ship_2
+$LOD: 1
+
+;$Name: exp20
+;$LOD: 1
+
+$Name: ExpMissileHit1
+$LOD: 1
+
+$Name: capflash
+$LOD: 1
+
+#End

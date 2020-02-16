@@ -1,0 +1,283 @@
+$Load Retail Configuration: No	
+$Max Directives:					8
+$Max Escort Ships:					15
+$Wireframe Targetbox: 3
+$Scale Gauges: no
+
+#Gauge Config
+    $Base: (1920, 1080)                    
+    $Required Aspect: Wide Screen 
+	$Gauges:        
+        +Training Messages: 
+        +Multiplayer Messages:
+        +Support: 
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (410, 30)
+;			Display Size: (400, 450)
+        +Damage: 
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (368, 104)
+;			Display Size: (460,385)
+;        +Wingman Status: 
+;            Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (295, 300)
+;			Display Offset: (650, 133)
+;			Display Size: (300, 300)
+;			Expansion Mode: 				Right
+		+Auto Speed:
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (200, 200)
+;			Display Offset: (311, 50)
+;			Display Size: (300, 300)
+        +Auto Target:
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (200, 200)
+;			Display Offset: (591, 50)
+;			Display Size: (300, 300)
+        +Countermeasures:
+;           Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (128, 128)
+;			Display Offset: (650,430)
+;			Display Size: (200, 200)
+        +Talking Head: 
+        +Directives: 
+        +Weapons: 
+;            Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (660, 470)
+;			Display Size: (400, 400)
+		+Warhead Count:
+;			Position: (855, 570)
+			Slew: true
+			Filename: 					Warhead_Icon_GRW
+			Name Offsets: 					(0, 0)
+			Count Offsets: 					(-4, 15)
+			Icon Width: 					6
+			Icon Height: 					21
+			Max Icons: 					12
+			Max Columns: 					12
+			;Name Alignment: 					Left
+		+Objective Notify: 
+        +Squad Message: 
+        +Escort View: 
+        +ETS Weapons: 
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (805, 205)
+;			Display Size: (360, 360)
+        +ETS Shields: 
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (825, 205)
+;			Display Size: (360, 360)
+        +ETS Engines: 
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (845, 205)
+;			Display Size: (360, 360)
+         +Target Monitor: 
+;            Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (512, 512)
+;			Display Offset: (124, 84)
+;			Display Size: (720, 720)
+;            Name Offsets: (0, 160)
+;            Class Offsets: (0, 170)
+;            Distance Offsets: (0, 180)
+;            Speed Offsets: (80, 180)
+;            Cargo Contents Offsets: (0, 325)
+;            Cargo Scan Start Offsets: (0, 43)
+			Desaturate: yes
+        +Extra Target Data:
+;           Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (512, 512)
+;			Display Offset: (20, 492)
+;			Display Size: (600, 600)
+		+Target Shields: 
+;           Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (215, 415)
+;			Display Size: (320, 320)
+        +Radar BSG:
+;			Position:					(0, 0)
+			XY Disc Filename:	DRADIS_XY_GRW
+			XZ YZ Disc Filename:	DRADIS_XZ_YZ_GRW
+			Sweep Disc Filename:	DRADIS_Sweep_GRW
+			Default Contact Filename:		Radar_Target_GRW
+			Unknown Contact Filename:		Radar_Unknown_GRW
+;			Cockpit Target: display_box
+;			Canvas Size: (512, 512)
+;			Display Offset: (355, 275)
+;			Display Size: (512,450)
+			Loop Sound:                                     293
+			Arrival Beep Sound:                             295
+			Stealth arrival Beep Sound:                     294
+			Minimum Beep Delay:                             3.5
+			Departure Beep Sound:                           74 
+			Minimum Beep Delay:                             3.5
+		+Player Shields: 
+;			Position: (0, 0)
+;			Cockpit Target: display_box
+;			Canvas Size: (256, 256)
+;			Display Offset: (639, 190)
+;			Display Size: (380, 380)
+		+Afterburner Energy: 
+            Slew: yes
+		+Weapon Energy:
+			Slew: yes
+			Armed Guns List Offsets: 				(90, -32)
+			Armed Guns List Alignment: 					Right
+		+Weapon Energy:
+			Slew: yes
+;			Filename: 					Empty
+			Text Offsets: 					(90, -47)
+			Text Alignment: Right
+			Always Show Text: 				true
+			Show Ballistic Ammo: 				true
+        +Text Warnings: 
+            Slew: yes
+;		+Custom:
+;			Position:										(702, 432)
+;			Name: 											reloads1
+;			Text: 
+;			Gauge Type: 									CENTER_RETICLE
+;			Slew:											Yes
+;			Active by default:								YES
+;			Filename: 										ReloadSecondary1
+;		+Custom:
+;			Position:										(702, 432)
+;			Name: 											reloads2
+;			Text: 
+;			Gauge Type: 									CENTER_RETICLE
+;			Slew:											Yes
+;			Active by default:								YES
+;			Filename: 										ReloadSecondary2
+;		+Custom:
+;			Position:										(702, 432)
+;			Name: 											reloads3
+;			Text: 
+;			Gauge Type: 									CENTER_RETICLE
+;			Slew:											Yes
+;			Active by default:								YES
+;			Filename: 										ReloadSecondary3
+		+Custom:
+			Position:										(328,340)
+			Font:											2
+			Name:											PromptBox
+			Text:											
+			X Offset:										75
+			Y Offset:										35
+			Gauge Type: 									WEAPONS_GAUGE 
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										proBox
+		+Custom:
+			Position:										(352,402)
+			Font:											2
+			Name:											PromptBoxOpt1
+			Text:											
+			X Offset:										25
+			Y Offset:										21
+			Gauge Type: 									WEAPONS_GAUGE 
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										proLine
+		+Custom:
+			Position:										(352,427)
+			Font:											2
+			Name:											PromptBoxOpt2
+			Text:											
+			X Offset:										25
+			Y Offset:										21
+			Gauge Type: 									WEAPONS_GAUGE 
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										proLine
+		+Custom:
+			Position:										(352,452)
+			Font:											2
+			Name:											PromptBoxOpt3
+			Text:											
+			X Offset:										25
+			Y Offset:										21
+			Gauge Type: 									WEAPONS_GAUGE 
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										proLine
+		+Custom:
+			Position:										(352,477)
+			Font:											2
+			Name:											PromptBoxOpt4
+			Text:											
+			X Offset:										25
+			Y Offset:										21
+			Gauge Type: 									WEAPONS_GAUGE 
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										proLine
+		+Custom:
+			Position:										(352,502)
+			Font:											2
+			Name:											PromptBoxOpt5
+			Text:											
+			X Offset:										25
+			Y Offset:										21
+			Gauge Type: 									WEAPONS_GAUGE 
+			Slew: 											NO
+			Active by default: 								NO
+			Filename: 										proLine
+        +Lead Indicator:
+             Filename: InRange_GRW
+             Center Offsets: (15, 15)
+        +Center Reticle: 
+            ;Position: (1920, 1080)
+			Filename:					Reticle_Center_GRW
+			Firepoint display: YES
+			Firepoint size: 10
+		+Lead Sight:
+			Filename: 					Leadsight_GRW
+		+Flight Path Marker:
+			Filename: 					Flight_Path_GRW
+			Center Offsets: 				(15, 15)
+        +Mini Target Shields:
+;			Position: (704, 508)
+			Slew: yes
+        +Throttle: 
+ ;           Position: (490,310)
+            Slew: yes
+        +Threat Indicator: 
+;            Position:	(845,310)
+			Slew: yes
+        +Voice Status: 
+;            Position: (7, 193)
+;        +Ping: 
+;            Position: (1260, 6)
+;        +Lag:
+;            Position: (881, 620)
+        +Supernova: 
+;            Position: (239, 199)
+        +Target Brackets:             
+        +Lock Indicator:
+			Lock Filename: Lock_GRW
+			Locked Filename: Locked_GRW
+        +Offscreen Indicator:
+        +Hostile Triangle: 
+        +Target Triangle: 
+        +Missile Triangles: 
+        +Orientation Tee: 
+        $End Gauges
+#End

@@ -1,0 +1,2135 @@
+;;
+;; This file is messages.tbl.  It specifies all generic messages that can be sent to the player
+;; during the mission (at least for single player).  Format is as follows:
+;;
+;; #Personas
+;; $Persona: <name>				;; persona name
+;;
+;; repeat the above '$Persona:' field for as many personas as needed
+;;
+;; $Name: <name>					;; name is an identifier used in Freespace to play the message
+;; $Message: <message>			;; message is what actualy gets displayed to the player
+;; +Persona: <persona name>	;; name of persona for this message.  Must match one of the above personas
+;; +Wave Name: <wave file>		;; optional name of a wave file to play with this message
+;; +Avi Name: <avi file>		;; optional name of a flick to play with this message
+;;
+;;
+;;
+
+
+;#Message Frequencies
+
+;#End
+
+;#Moods
+
+;#End
+
+#Personas
+
+$Persona: GRWPilot1	  
+$Type: wingman
+
+$Persona: GRWPilot2
+$Type: wingman
+
+$Persona: GRWPilot3
+$Type: wingman
+
+$Persona: GRWPilot4
+$Type: wingman
+
+$Persona: GRWPilot5
+$Type: wingman
+
+$Persona: GRWPilot6
+$Type: wingman
+
+$Persona: GRWPilot7
+$Type: wingman
+
+$Persona: GRWPilot8
+$Type: wingman
+
+$Persona: GRWPilot9
+$Type: wingman
+
+$Persona: AuthorityPilot1
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot2
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot3
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot4
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot5
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot6
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot7
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot8
+$Type: wingman
++Authority
+
+$Persona: AuthorityPilot9
+$Type: wingman
++Authority
+
+$Persona: Support Ship
+$Type: support
+
+$Persona: Large Ship
+$Type: large
+
+$Persona: GRW Command
+$Type: Command
+
+#Messages
+
+
+;; ALL CLEAR ..................................................................................
+
+$Name: All Clear
+$Message: XSTR("We have cleared this area of all hostile presence.", 2725)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("No more hostiles here. The area is clear.", 2726)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("Area is clear of hostile presence.", 2727)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("No enemies are present in this region.", 2728)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("Hostiles are destroyed, and the area is clear.", 2729)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("None of these motherfuckers alive in the area.", 2730)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("All enemy forces negated.", 2731)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("All hostiles have been vanquished.", 2731)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Clear
+$Message: XSTR("All hostiles have been vanquished.", 2731)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; ARRIVAL (Enemy) ...................................................................
+
+$Name: Arrive Enemy
+$Message: XSTR("Hostiles just arrived!", 1079)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy
+$Message: XSTR("New hostiles closing in!", 1078)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy
+$Message: XSTR("IFF contact! Enemies coming!", 2732)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy
+$Message: XSTR("Hostiles are arriving!", 2733)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy
+$Message: XSTR("I've got incoming!", 1080)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy
+$Message: XSTR("Reading new motherfuckers approaching.", 2734)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy 
+$Message: XSTR("Enemies inbound.", 2735)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy 
+$Message: XSTR("New bandits have arrived!", 2735)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy 
+$Message: XSTR("Picking up new hostile IFFs!", 2735)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Arrive Enemy
+$Message: XSTR("Incoming arrival signatures! Hostile IFF!", 2736)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; ATTACK MY TARGET ...........................................................................
+
+$Name: Attack Target
+$Message: XSTR("I read you. Engaging your designated target.", 2737)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("As you say. We shall run them down.", 2738)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Breaking to attack your target.", 2739)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Designated target in sight. Ready to attack.", 2740)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Commencing attack.", 2741)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("I've got your designated target in my fucking sights.", 2742)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Roger that, we'll annihilate your target.", 2743)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Beginning attack vector against your target.", 2743)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Starting to attack.", 2743)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Acknowledged. We will engage.", 2737)
++Persona: HorologianPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Attacking your designated target.", 2738)
++Persona: HorologianPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Designated target confirmed. Attacking.", 2739)
++Persona: HorologianPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Commencing attack on your designated target.", 2740)
++Persona: HorologianPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("We'll take them down.", 2741)
++Persona: HorologianPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Engaging your designated target.", 2742)
++Persona: HorologianPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Designated target acquired and locked in.", 2743)
++Persona: HorologianPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Target locked in.", 2743)
++Persona: HorologianPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Attack Target
+$Message: XSTR("Starting to attack!", 2743)
++Persona: HorologianPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; BACKUP ARRIVAL (previously named "REINFORCEMENTS") .........................................
+
+$Name: Backup
+$Message: XSTR("We are here to reinforce you.", 2744)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Backup
+$Message: XSTR("We pilots are here to assist you.", 2745)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Backup
+$Message: XSTR("We have come here to fight alongside you.", 2746)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Backup
+$Message: XSTR("Reinforcements are here.", 2747)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Backup
+$Message: XSTR("Friendlies have arrived. Awaiting your command.", 2748)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Backup
+$Message: XSTR("We are here to assist. What is your status?", 2749)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Backup
+$Message: XSTR("We have arrived and is now on station.", 2750)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; BETA WING ARRIVAL ..........................................................................
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing is here, standing by.", 2751)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("This is Vishnu wing, awaiting your instructions.", 2752)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing reporting to assist.", 2753)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing has arrived. What is your will?", 2754)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing has arrived on aid you in the battlefield!", 2755)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing reporting for the fight.", 2756)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("This is Vishnu wing. Standing by for orders.", 2757)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing is on station. Awaiting orders.", 2756)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Beta Arrived
+$Message: XSTR("Vishnu wing here. What's your status?", 2757)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; CHECK YOUR SIX .............................................................................
+
+$Name: Check 6
+$Message: XSTR("You've got a fighter on your rear, pilot!", 2758)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("There's a bandit on your six!", 2759)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("Watch your six! Watch your six!", 2760)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("Directly behind you, pilot!", 2761)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("On your rear, pilot!", 2762)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("Check your fucking back, pilot!", 2763)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("Attacking craft on your rear!", 2764)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("Watch your six!", 2764)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Check 6
+$Message: XSTR("Bandit on your tail, pilot!", 2764)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; DEATH (previously wingman scream)...................................................
+
+$Name: Death
+$Message: XSTR("NOOOOOOOO!!!", 2765)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Bloody hell!!", 2766)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("It's gonna BLOOOOW!", 2767)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Oh shit!!  AAAAAAH!", 2768)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("I'm hit!  I'm hit!", 2769)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Aw, fuck!  AAAAAH!", 2770)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Son of a bitch!  AAIIIIIIIIIGH!", 2771)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("It's impossible!  AAAAAAAIEE!", 2770)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Wo-oh-oh-oooooh!!!", 2771)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("I'm hit pretty bad!", 2765)
++Persona: AuthorityPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("You shall fall for this!", 2766)
++Persona: AuthorityPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("My death means nothing!  You shall pay!", 2767)
++Persona: AuthorityPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("I have failed!", 2768)
++Persona: AuthorityPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Reactor integrity critical!  AAAAARRRRGGGHHH!", 2769)
++Persona: AuthorityPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("I am taking you all down with me!", 2770)
++Persona: AuthorityPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Hull compromised!", 2771)
++Persona: AuthorityPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("I'm going down!", 2771)
++Persona: AuthorityPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Breaking up!  I'm breaking up!", 2771)
++Persona: AuthorityPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Death
+$Message: XSTR("Hull collapsing!  Hull collapsing!", 2771)
++Persona: Support Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; DELTA WING ARRIVAL .........................................................................
+
+$Name: Delta Arrived
+$Message: XSTR("This is Krishna wing.  What is your situation?", 2772)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing is here.  We await your orders.", 2773)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing arrival successful.  Ready for further orders.", 2774)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing ready and awaiting your command.", 2775)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing has entered the field. Your will?", 2776)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing is here to aid you.", 2777)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing reporting in.  What is your command?", 2778)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing has arrived and awaiting orders.", 2772)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Delta Arrived
+$Message: XSTR("Krishna wing is now on station.", 2773)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; DEPART (previously named "WARPOUT") ........................................................
+
+$Name: Depart
+$Message: XSTR("At once.  Engaging bubbledrive.", 2779)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Returning to base now now.", 2780)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("As you say. I am leaving now.", 2781)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Right away. Leaving the battlefield.", 2782)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Hearing and obeying. Departing.", 2783)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Departing?  Are you fucking crazy?", 2784)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Leaving the area by your command.", 2785)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Acknowledged. Departing area.", 2784)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Roger that. See you back home.", 2785)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Understood.  Departing now.", 2786)
++Persona: Support Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Depart
+$Message: XSTR("Order received, departing now.", 2788)
++Persona: Large Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; DISABLE TARGET .............................................................................
+
+$Name: Disable Target
+$Message: XSTR("As you say. That target will be disabled.", 2789)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Their engines will be destroyed as you wish.", 2790)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Acquiring lock on engines.", 2791)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg 
+
+
+$Name: Disable Target
+$Message: XSTR("We read you. Disabling your target.", 2792)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Engines locked in. Beginning the assault.", 2793)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Your target shall be disabled at once.", 2794)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Heard and understood. Going for the engines.", 2795)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Attack run on the designated target's engines, beginning.", 2794)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disable Target
+$Message: XSTR("Neutralizing your target's engines.", 2795)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; DISARM TARGET ..............................................................................
+
+$Name: Disarm Target
+$Message: XSTR("It shall not be firing back for long.", 2796)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disarm Target
+$Message: XSTR("As you say, its weapons shall be silenced.", 2797)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg 
+
+
+$Name: Disarm Target
+$Message: XSTR("I understand. Moving to disarm the target.", 2798)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disarm Target
+$Message: XSTR("Disarm weapons. Order understood.", 2799)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disarm Target
+$Message: XSTR("By your word. Those weapons will fall.", 2800)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg 
+
+
+$Name: Disarm Target
+$Message: XSTR("Right away. Weapons targeted. ", 2801)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg 
+
+
+$Name: Disarm Target
+$Message: XSTR("Understood, neutralizing weapons.", 2802)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Disarm Target
+$Message: XSTR("Focusing on the target's weapons.", 2801)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg 
+
+
+$Name: Disarm Target
+$Message: XSTR("Acknowledged. Weapon subsystem targeted and locked in.", 2802)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; ENGAGE ENEMY ...............................................................................
+
+$Name: Engage
+$Message: XSTR("Breaking to engage.", 2803)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("As you wish. Engaging!", 2804)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("Breaking to engage hostiles now.", 2805)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("With pleasure.", 2806)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("Engaging enemies.", 2807)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("By your command. Moving to annihilate enemies.", 2808)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("Breaking formation to attack.", 2809)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("By your command. Moving to annihilate enemies.", 2808)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Engage
+$Message: XSTR("Breaking formation to attack.", 2809)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; EPSILON ARRIVAL ............................................................................
+
+$Name: Epsilon Arrived
+$Message: XSTR("Rama wing, reporting arrival.", 2810)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Epsilon Arrived
+$Message: XSTR("Rama wing has arrived. Awaiting your orders.", 2811)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Epsilon Arrived
+$Message: XSTR("Rama here, ready for battle!", 2812)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Epsilon Arrived
+$Message: XSTR("Rama wing is here to assist you.", 2813)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Epsilon Arrived
+$Message: XSTR("This is Rama wing. Orders?", 2814)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Epsilon Arrived
+$Message: XSTR("Rama wing reporting in. Give us instructions.", 2815)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Epsilon Arrived
+$Message: XSTR("Rama wing in position and awaiting instructions.", 2816)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; GAMMA ARRIVAL ..............................................................................
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing reports arrival. Awaiting orders.", 2817)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing has arrived. What will you have us do?", 2818)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing reporting, awaiting orders.", 2819)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing on station. What is your request?", 2820)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing is here and standing by.", 2821)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing has arrived. Requesting further orders.", 2822)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Gamma Arrived
+$Message: XSTR("Shiva wing now on station and eager to assist.", 2823)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; HELP (REDUDANT TO ASSIST??) ................................................................
+
+$Name: Help
+$Message: XSTR("Taking critical damage!", 2824)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("Hull integrity critical! Need support right now!", 2825)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("My craft shall not last much longer without support!", 2826)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("I cannot hold 'em for long!", 2827)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("Sustained serious damage! Requesting cover!", 2828)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("That does it! Now I'm fucked up!", 2829)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("I can't take much more of this punishment!", 2830)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("Hostile's over me! Attempting to evade!", 2824)
++Persona: HorologianPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("Systems beginning to give way!", 2825)
++Persona: HorologianPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("Could you get this bandit off my back?!", 2826)
++Persona: HorologianPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("I can't shake this bandit!", 2827)
++Persona: HorologianPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("I can't hold them off for long!", 2828)
++Persona: HorologianPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("Hull integrity critical! Ship's about to explode!", 2829)
++Persona: HorologianPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("My ship cannot last any longer!", 2830)
++Persona: HorologianPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("I am in dire peril! Get me outta here!", 2829)
++Persona: HorologianPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Help
+$Message: XSTR("I'm taking heavy damage. Cover me.", 2830)
++Persona: HorologianPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; IGNORE TARGET ..............................................................................
+
+$Name: Ignore Target
+$Message: XSTR("Understood. Ignoring target!", 2831)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Ignore Target
+$Message: XSTR("Obeying your word. That one is yours.", 2832)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Ignore Target
+$Message: XSTR("Your choice, pilot. Ignoring target now.", 2833)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Ignore Target
+$Message: XSTR("So be it. Disregarding that hostile.", 2834)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Ignore Target
+$Message: XSTR("As you wish, you may take the kill.", 2835)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Ignore Target
+$Message: XSTR("Ignoring that hostile as you say.", 2836)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Ignore Target
+$Message: XSTR("Understood. The kill is yours.", 2837)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; NEGATIVE REPLIES ...........................................................................
+
+$Name: No
+$Message: XSTR("You cannot ask that of me.", 2838)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("I cannot do this.", 2839)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("I refuse to complete your order.", 2840)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("Your request cannot be done.", 2841)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("With all due respect, it cannot be done, pilot.", 2842)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("What you will is not possible.", 2843)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("That is out of the question.", 2844)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("I will not take a single order from you.", 2838)
++Persona: HorologianPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("Negative, pilot.", 2839)
++Persona: HorologianPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("I do not presume to be given orders, pilot.", 2840)
++Persona: HorologianPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("With all due respect, you're out of line, pilot.", 2841)
++Persona: HorologianPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("Not in my orders.", 2842)
++Persona: HorologianPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("Unable to comply, pilot.", 2843)
++Persona: HorologianPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("Bit of a problem on that.", 2844)
++Persona: HorologianPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("I can't do that right now.", 2844)
++Persona: HorologianPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No
+$Message: XSTR("That's a negative, pilot.", 2844)
++Persona: HorologianPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; NO TARGET ..................................................................................
+
+$Name: No Target
+$Message: XSTR("I am unable to track your target.", 2845)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No Target
+$Message: XSTR("I do not see that which you wish me to kill, pilot.", 2846)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No Target
+$Message: XSTR("Where is this enemy you speak of?", 2847)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No Target
+$Message: XSTR("There is no target to be seen.", 2848)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No Target
+$Message: XSTR("Can you revise that attack order?", 2849)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No Target
+$Message: XSTR("Request data invalid, there is no target.", 2850)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: No Target
+$Message: XSTR("Check your information. Nothing is there.", 2851)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; Oops 1 (Player "accidentally" fires upon friendly ..........................................
+
+$Name: Oops 1
+$Message: XSTR("Are you insane? Stop attacking me!", 2852)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("Hey, I never knew you cared.", 2853)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("Cut it out at once, pilot!", 2854)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("Look before you shoot!", 2855)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("We are on the same side, you fool!", 2856)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("I am on the same side, pilot!", 2857)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("Are you not worthy of being a pilot?", 2858)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Oops 1
+$Message: XSTR("You have attacked an invalid target! Cease fire!", 2859)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; PLAYER KILLED (previously "player died")...........................................
+
+$Name: Player Dead
+$Message: XSTR("Friendly down!  I repeat, friendly down!", 2860)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Pilot!  Pilot, come in?!  Do you read me?", 2861)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Damn!  That pilot took too many chances.", 2862)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Lost a pilot.  I'll take up his reins.", 2863)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Pilot neutralised!", 2864)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("We've lost one of their own.  Fuck it!", 2865)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Is this worth the price?", 2866)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Squadmate gone up in flames!", 2769)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Player Dead
+$Message: XSTR("Squad lost one of our own!", 2771)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; PRAISE .....................................................................................
+
+$Name: Praise
+$Message: XSTR("Target eliminated!", 2867)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("Look at that!", 2868)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("Hostile down!", 2869)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("Show us how it's done!", 2870)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("Bet that hurt!", 2871)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("Chalked up an asshole!", 2872)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("You've got 'em!", 2873)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("Fried that bastard!", 2872)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise
+$Message: XSTR("That's a confirmed kill!", 2873)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; PRAISE SELF ................................................................................
+
+$Name: Praise Self
+$Message: XSTR("Got one! Take that you son of a bitch!", 2867)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("Sometimes I'd really impress myself.", 2868)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("I hope you take one down for me.", 2869)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("Guess that's not so hard after all.", 2870)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("That got 'em.", 2871)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("Chalk up a motherfucker!", 2872)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("You want some more?!", 2873)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("Got that hostile!", 2872)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Praise Self
+$Message: XSTR("Damn I'm really better!", 2873)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; REARM ......................................................................................
+
+$Name: Rearm
+$Message: XSTR("All armaments depleted!  Calling in for support!", 2874)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("Disenaging now for rearming.", 2875)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("Support, need more ammunition here!", 2876)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("All ordnance have been expended!  Calling in support!", 2877)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("I need to rearm!  Requesting support ship!", 2878)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("Fuck! My ammunition has been depleted!", 2879)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("Ordnance has gone dry!  Get support here pronto!", 2880)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("I'm out of ammunition!  Calling in some support!", 2880)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm
+$Message: XSTR("My banks have dried up!  Requesting support!", 2880)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; REPAIR .....................................................................................
+
+$Name: Repair
+$Message: XSTR("Systems damaged!  Get support here!", 2881)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("Systems are heavily damaged!  I need urgent repair!", 2882)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("Subsystems have failed!  I need support immediately!", 2883)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("I need subsystem repairs!  Requesting support now!", 2884)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("Subsystems damaged!  Calling in support!", 2885)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("I need my fucking subsystems repaired. Where the hell is the support ship?", 2886)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("My systems have been incapacitated, requesting support!", 2887)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("Awaiting repairs!", 2887)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair
+$Message: XSTR("Subsystems going berserk!", 2887)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; STRAY ............................................................................
+
+$Name: Stray
+$Message: XSTR("Where are you going?", 2888)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("That is the wrong way. Come back!", 2889)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("Where do you think are you going?", 2890)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("That is not our territory. Return back here!", 2891)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("Return to the fray right now!", 2892)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("Hey, where the fuck are you going? Get back at once!", 2893)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("Let's concentrate on our objectives.", 2894)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("Let's concentrate on our objectives.", 2894)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray
+$Message: XSTR("Let's concentrate on our objectives.", 2894)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; TRAITOR ...........................................................................
+
+$Name: Traitor
+$Message: XSTR("You will pay for that, traitor!", 2895)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("No mercy for traitors!", 2896)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("Show no mercy for this traitor!", 2897)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("I don not feel sorry for you. You will die for that!", 2898)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("You will suffer the same fate as the hostiles!", 2899)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("Oh, fine! Now you're fucking against me, too?", 2900)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("I've wanted to tangle with you... I guess it's time.", 2901)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("I'm going to have to teach you a lesson for this, traitor!", 2897)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("You disgraced yourself, pilot!", 2900)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Traitor
+$Message: XSTR("All units, terminate the traitor.", 2902)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; YES ...............................................................................
+
+$Name: yes
+$Message: XSTR("Understood.", 2903)
++Persona: GRWPilot1
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("I hear and obey.", 2904)
++Persona: GRWPilot2
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("Instruction received.", 2905)
++Persona: GRWPilot3
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("Of course!", 2906)
++Persona: GRWPilot4
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("As you wish.", 2907)
++Persona: GRWPilot5
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("For the Worlds.", 2908)
++Persona: GRWPilot6
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("By your order.", 2909)
++Persona: GRWPilot7
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("By your order.", 2909)
++Persona: GRWPilot8
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: yes
+$Message: XSTR("By your order.", 2909)
++Persona: GRWPilot9
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+;; SUPPORT SHIP SECTION ..............................................................
+
+$Name: On Way
+$Message: XSTR("Copy.  Support ship now on our way.", 2910)
++Persona: Support Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Rearm On Way
+$Message: XSTR("Hold on, pilot.  We are on our way.", 2912)
++Persona: Support Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: 	Rearm warping in
+$Message: XSTR("Dispatching a support ship now. Please stand by.", 2914)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair Done
+$Message: XSTR("Rearming and repairing sequence completed.  You are cleared to go.", 2915)
++Persona: Support Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Repair Aborted
+$Message: XSTR("Rearming and repairing sequence aborted.", 2917)
++Persona: Support Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Support Killed
+$Message: XSTR("A support ship has been shot down!", 2919)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: All Alone
+$Message: XSTR("No other vessels are available to aid you. You are on your own, pilot.", 2920)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Instructor Hit
+$Message: XSTR("That is an invalid target! Cease your fire!", 2921)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Instructor Attack
+$Message: XSTR("Your instructor is not an hostile, pilot.", 2922)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray Warning
+$Message: XSTR("Deserting the battlefield is terms for your court martial. Return to the field of engagement.", 2923)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Stray Warning Final
+$Message: XSTR("This is your final warning. Return to the combat area.", 2924)
++Persona: GRW Command
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Awacs at 75
+$Message: XSTR("AWACS has sustained moderate damage! Please assist!", 2925)
++Persona: Large Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+$Name: Awacs at 25
+$Message: XSTR("AWACS hull integrity has fallen below critical! Requesting immediate fighter cover!", 2926)
++Persona: Large Ship
+;+Avi Name: Ancient_ani
++Wave Name: Emptymsg.ogg
+
+
+#End

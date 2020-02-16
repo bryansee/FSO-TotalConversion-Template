@@ -1,0 +1,62 @@
+; background bitmaps - random stuff
+; $Bitmap is for a bitmap which should use the intensity == alpha blending mode
+; $BitmapX is for a bitmap which should use 0, 255, 0 == transparent, and no blending otherwise
+
+
+#end
+
+$Sun:		SunSol
+$Sunglow:	Sunglow01
+$SunRGBI:	1.0 0.96 0.95 1.0
+$Flare:
+	+FlareCount:	6
+$FlareTexture1: SolCorona001
+$FlareTexture2: SolCorona002
+$FlareTexture3: Corona003
+$FlareTexture4: Corona004
+$FlareTexture5: Corona005
+$FlareTexture6: Corona006
+$FlareGlow1:
+	+FlareTexture:	1
+	+FlarePos:		0.0
+	+FlareScale:	5
+$FlareGlow2:
+	+FlareTexture:	2
+	+FlarePos:		0.1
+	+FlareScale:	16
+$FlareGlow3:
+	+FlareTexture:	3
+	+FlarePos:		0.3
+	+FlareScale:	2
+$FlareGlow4:
+	+FlareTexture:	4
+	+FlarePos:		0.6
+	+FlareScale:	1
+$FlareGlow5:
+	+FlareTexture:	5
+	+FlarePos:		1.2
+	+FlareScale:	6
+$FlareGlow6:
+	+FlareTexture:	6
+	+FlarePos:		1.8
+	+FlareScale:	4
+
+#end
+
+; debris .ani's for NON-nebula mode. NOTE : there must always be 4 of these
+$Debris:	debris01
+$Debris:	debris02
+$Debris:	debris03
+$Debris:	debris04
+
+#end
+
+; debris .ani's for nebula mode. NOTE : there must always be 4 of these
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+$DebrisNeb:	gas
+
+#end
+
+#end

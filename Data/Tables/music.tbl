@@ -1,0 +1,49 @@
+;#SoundTrack Start
+;$Soundtrack Name: 1: Placeholder
+;$Name: Amb1.wav 25.0 105840
+;$Name: AArv1.wav 25.0 105840
+;$Name: EArv1.wav 25.0 105840
+;$Name: Btl1.wav 25.0 105840
+;$Name: Btl2.wav 25.0 105840
+;$Name: Btl3.wav 25.0 105840
+;$Name: AArv2.wav 25.0 105840
+;$Name: EArv2.wav 25.0 105840
+;$Name: Vict1.wav 25.0 105840
+;$Name: Vict2.wav 25.0 105840
+;$Name: Fail1.wav 25.0 105840
+;$Name: Dead1.wav 25.0 105840
+;$Name: Amb2.wav 25.0 105840
+;$Name: Amb3.wav 25.0 105840
+;#SoundTrack End
+;$Name: EAmb1.wav 25.0 105840
+;$Name: EAmb2.wav 25.0 105840
+;$Name: EAmb3.wav 25.0 105840
+;$Name: AArv3.wav 25.0 105840
+;$Name: EArv3.wav 25.0 105840
+;$Name: Fail1.wav 25.0 105840
+;$Name: EDead1.wav 25.0 105840
+;$Name: EDead2.wav 25.0 105840
+;$Name: ADead1.wav 25.0 105840
+;$Name: ADead2.wav 25.0 105840
+;$Name: Transition1.wav 25.0 105840
+;$Name: Transition2.wav 25.0 105840
+;#SoundTrack End
+
+#Menu Music Start
+
+$Name: Maurya
+$Filename: PH_Cinema2.wav
+
+$Name: Success
+$Filename: Success.wav
+
+$Name: Average
+$Filename: PH_Cinema2.wav
+
+$Name: Failure
+$Filename: PH_Cinema2.wav
+
+$Name: Credits
+$Filename: PH_Cinema2.wav
+
+#Menu Music End

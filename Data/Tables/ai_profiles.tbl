@@ -1,0 +1,101 @@
+#AI Profiles
+
+$Default Profile:								SS
+
+$Profile Name:									SS
+
+$Player Afterburner Recharge Scale:				4,		2,		1,		0.5,	0.25
+$Max Beam Friendly Fire Damage:					0,		5,		10,		20,		40
+$Player Countermeasure Life Scale:				2,		1.75,	1.5,	1.25,	1
+$AI Countermeasure Firing Chance:				0.2,	0.4,	0.6,	0.8,	1.0
+$AI In Range Time:								1.0,	0.75,	0.5,	0.25,	0
+$AI Always Links Ammo Weapons:					60,		50,		40,		30,		20
+$AI Maybe Links Ammo Weapons:					60,		50,		40,		30,		20
+$Primary Ammo Burst Multiplier:					0.1, 	0.2, 	0.3, 	0.4, 	0.5
+$AI Always Links Energy Weapons:				60,		50,		40,		30,		20
+$AI Maybe Links Energy Weapons:					60,		50,		40,		30,		20
+$Max Missles Locked on Player:					4,		8,		12,		16,		20
+$Max Player Attackers:							4,		8,		12,		16,		20
+$Max Incoming Asteroids:						4,		8,		12,		16,		20
+$Player Damage Factor:							0.25,	0.5,	1,		2,		4
+$Player Subsys Damage Factor:					0.25,	0.5,	1,		2,		4
+$Predict Position Delay:						0,		0,		0,		0,		0
+$Player Shield Recharge Scale:					2,		1.75,	1.5,	1.25,	1
+$AI Shield Manage Delay:						1.0,	0,8		0.6,	0.4,	0.2
+$Friendly AI Fire Delay Scale:					1,		1,		1,		1,		1
+$Hostile AI Fire Delay Scale:					1.2,	1.1,	1,		1,		1
+$AI Turn Time Scale:							1.2,	1.1,	1,		1,		1
+$Glide Attack Percent:							20,		40,		60,		80,		100
+$Circle Strafe Percent:							20,		40,		60,		80,		100
+$Glide Strafe Percent:							20,		40,		60,		80,		100
+$Random Sidethrust Percent:						20,		40,		60,		80,		100
+$Stalemate Time Threshold:						15,		15,		15,		15,		15
+$Stalemate Distance Threshold:					100,	100,	100,	100,	100
+$Player Shield Recharge Scale:					2,		1.75,	1.5,	1.25,	1
+$Player Weapon Recharge Scale:					2,		1.75,	1.5,	1.25,	1
+$Max Turret Target Ownage:						99,		99,		99,		99,		99
+$Max Turret Player Ownage:						4,		8,		12,		16,		20
+$Percentage Required For Kill Scale:			0.30,	0.30,	0.30,	0.30,	0.30
+$Percentage Required For Assist Scale:			0.15,	0.15,	0.15,	0.15,	0.15
+$Percentage Awarded For Capship Assist:			0.5,	0.5,	0.5,	0.5,	0.5
+$Repair Penalty:								10,		20,		30,		40,		50
+$Delay Before Allowing Bombs to Be Shot Down:  	0.5,	0.5,	0.5,	0.5,	0.5
+$Chance AI Has to Fire Missiles at Player:		2, 		4, 		6, 		8, 		10
+$Max Aim Update Delay:							0.25,	0.2,	0.15,	0.10,	0.05
+$Turret Max Aim Update Delay:					0,		0,		0,		0,		0
+$Player Autoaim FOV:							0,		0,		0,		0,		0
+$Detail Distance Multiplier:					0.125,	0.25,	1.0,	4.0,	8.0
+
+$big ships can attack beam turrets on untargeted ships:		YES
+$smart primary weapon selection:							YES
+$smart secondary weapon selection:							YES
+$smart shield management:									YES
+$smart afterburner management:								YES
+$allow rapid secondary dumbfire:							YES
+$huge turret weapons ignore bombs:							YES
+$don't insert random turret fire delay:						YES
+$hack improve non-homing swarm turret fire accuracy:		YES
+$shockwaves damage small ship subsystems:					YES
+$don't insert random turret fire delay:						YES
+$hack improve non-homing swarm turret fire accuracy:		YES
+$shockwaves damage small ship subsystems:					YES
+$navigation subsystem governs warpout capability:			NO
+$ignore lower bound for minimum speed of docked ship:		NO
+$disable linked fire penalty:								NO
+$disable weapon damage scaling:								NO
+$use additive weapon velocity:								YES
+$use newtonian dampening:									YES
+$include beams for kills and assists:						YES
+$score kills based on damage caused:						YES
+$score assists based on damage caused:						YES
+$allow event and goal scoring in multiplayer:				YES
+$fix linked primary weapon decision bug:					YES
+$prevent turrets targeting too distant bombs:				YES
+$smart subsystem targeting for turrets:						YES
+$fix heat seekers homing on stealth ships bug:				YES
+$multi allow empty primaries:								YES
+$multi allow empty secondaries:								YES
+$allow turrets target weapons freely:						YES
+$use only single fov for turrets:							YES
+$allow vertical dodge:										YES
+$force beam turrets to use normal fov:						NO
+$fix AI class bug:											YES
+$turrets ignore targets radius in range checks:				YES
+$No extra collision avoidance vs player:					YES
+$perform fewer checks for death screams:					YES
+$advanced turret fov edge checks:							YES
+$require turrets to have target in fov:						YES
+$all ships manage shields:									YES
+$ai aims from ship center:									YES
+$allow primary link at mission start:						NO
+$allow beams to damage bombs:								YES
+$disable weapon damage scaling for player:					NO
+$countermeasures affect aspect seekers:						YES
+$ai path mode:												alt1
+$fix ai path order bug:										YES
+$glide decay requires thrust:								YES
+$ai can slow down when attacking big ships:					YES
+$bay arrive speed multiplier:								0.25
+$bay depart speed multiplier:								0.25
+
+#End

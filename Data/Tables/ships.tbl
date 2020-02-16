@@ -1,0 +1,16 @@
+#Default Player Ship
+$Name: Enter Fighter/Bomber Name
+#End
+#Engine Wash Info
+
+;; NOTE:  The default MUST be the first entry in the list of engine wash info
+
+#End
+
+#Ship Classes
+
+;; Add your ship class tables here
+
+#End
+
+$Player Ship Precedence: ()

@@ -1,0 +1,9 @@
+body
+{
+	background-color: #000000;
+}
+
+div#main
+{
+	width: 100%;
+}

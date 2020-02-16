@@ -1,0 +1,49 @@
+#Conditional Hooks
+
+$State: GS_STATE_GAME_PLAY
+
+$On Game Init:
+[
+   if not mediavps then
+      mediavps = {}
+   end
+   if mediavps then
+      if not mediavps.flakOverride then
+         mediavps.flakOverride = false
+         ba.print("MediaVPs: Flak script loaded!\n")
+      end
+   end
+]
+
+$On Frame:
+
+[
+if not mediavps.flakOverride then
+   floatMissionTime = mn.getMissionTime()
+
+   if floatMissionTime ~= nil then
+      floatFrameTime = ba.getFrametime(true)
+
+      if textureFlak == nil then
+         -- Define the graphics file used for the flak, in this example file used is 'lglow3.dds'
+         textureFlak = gr.loadTexture("lglow3")
+         vectorNull = ba.createVector(0,0,0)
+      end
+
+      -- Iterate through all the weapons
+      for j=1,#mn.Weapons do
+         objectWeapon = mn.Weapons[j]
+         -- If weapon type is the one within "s" then...
+         stringWeaponType = objectWeapon.Class.Name
+         if stringWeaponType == "Flak Energy" then
+            -- Create particle effect where the weapon is ATM
+            -- One can always increase the 'frametime' to frametime x 4 etc if needed.
+            ts.createParticle(vectorNull,vectorNull,floatFrameTime,2.0,PARTICLE_BITMAP,-1,false,textureFlak,objectWeapon)
+         end
+      end
+   end
+end
+
+]
+
+#End

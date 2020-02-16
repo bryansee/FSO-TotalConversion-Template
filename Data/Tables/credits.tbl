@@ -1,0 +1,76 @@
+$Music: Credits
+$Number of Images: 46
+$SCP Credits position: end
+
+XSTR("Ruptured Stars", -1)
+
+XSTR("Team and Contributors", -1)
+
+Darius
+Esarai
+Nyctaeus
+Bryan See
+Starbug
+
+XSTR("FreeSpace 2 Source Code Project Team and Contributors", -1)
+
+"Bobboau"
+Samuel "Swifty" Cho
+Joe "Righteous1" Dowd
+Edward "Inquisitor" Gardner
+Cliff "Chief1983" Gordon
+Mike "penguin" Harris
+Hassan "Karajorma" Kazmi
+"Mysterial"
+"m!m"
+"niffiwan"
+"PhReAk"
+Dennis "DTP" Pedersen
+Joel "Axem" Reimer
+Taylor Richards
+Ian "Goober5000" Warfield
+Fabian "The E" Woltermann
+
+XSTR("Hard Light Productions Staff", -1)
+
+Alex "Thunder" Avery
+
+XSTR("Original FreeSpace/FreeSpace 2 Team", -1)
+
+Mark Allender
+Dave Andsager
+Dave Baranec
+Jim Boone
+Frank Capezzuto III
+Mike Comet
+Jeff Farris
+Peter Han
+Jason Hoffoss
+Brad Johnson
+Mike Kulas
+Neil Kumar
+Alan Lawrance
+Duncan McPherson
+Adam Pletcher
+Jason Scott
+Sandeep Shekar
+John Slagel
+Mitri Van
+Dan Wentz
+Jasen Whiteside
+
+XSTR("Shattered Stars is dedicated to:", -1)
+
+XSTR("FSO Open License Attributions:", -1)
+
+SDL 2.0 and newer are available under the zlib license:
+
+This software is provided 'as-is', without any express or implied warranty.  In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+
+#end

@@ -1,0 +1,263 @@
+#Conditional Hooks
+
+$Application: FS2_Open
+
+$On Game Init:
+[
+   if not mediavps then
+      mediavps = {}
+   end
+   if mediavps then
+      if not mediavps.debrisOverride then
+         mediavps.debrisOverride = false
+         ba.print("MediaVPs: Flaming debris script loaded!\n")
+      end
+   end
+]
+
+$On Mission Start:
+[
+if not mediavps.debrisOverride then
+   ba.print("MediaVPs: Flaming debris script ACTIVE!\n")
+   -- init things
+   v_null = ba.createVector(0,0,0)
+   v_rnd_sphere = v_null
+   arr_debris_smokes = {}
+   arr_freed_smokes = {}
+   l_anim_debris = gr.loadTexture("ParticleSmoke01", true)
+
+
+   function get_rnd_vector_sphere()
+      local l_bool_ok_to_pass = false
+      local l_get_rnd = math.random
+
+      while (l_bool_ok_to_pass == false) do
+
+         -- get random vector (cube, -1 to 1)
+         v_rnd_sphere[1] = (2* (l_get_rnd() - 0.5))
+         v_rnd_sphere[2] = (2* (l_get_rnd() - 0.5))
+         v_rnd_sphere[3] = (2* (l_get_rnd() - 0.5))
+         local l_n_mag = v_rnd_sphere:getMagnitude()
+
+         -- accept only values within a sphere (uniform)
+         if l_n_mag <= 1 then
+            v_rnd_sphere = v_rnd_sphere / l_n_mag
+            l_bool_ok_to_pass = true
+         end
+      end
+      return v_rnd_sphere;
+   end
+
+   function get_ray_collision_pos_debris(debris, v_ray, num_tries)
+      local l_or_debris = debris.Orientation
+      local l_f_radius = 5000
+      local l_n_has_tried = 0
+      local l_c_ray_pos
+      local l_get_rnd = math.random()
+      local l_debris_pos = debris.Position
+
+      while (l_n_has_tried < num_tries) do
+         local v_ray = v_ray * l_f_radius
+         local l_v_end_pos = debris.Position - v_ray
+         local l_v_start_pos = debris.Position + v_ray
+
+         l_c_ray_pos = debris:checkRayCollision(l_v_start_pos, l_v_end_pos, true)
+
+         if l_c_ray_pos ~= nil then
+            l_n_has_tried = num_tries
+         else
+            l_n_has_tried = 1 + l_n_has_tried
+         end
+      end
+
+      return l_c_ray_pos
+   end
+
+   function get_number_of_explosions(attempts)
+      local l_n_partials
+      local l_n_full
+      l_n_full, l_n_partials = math.modf(attempts)
+
+      if l_n_partials ~= 0 then
+         if math.random() > l_n_partials then
+            l_n_full = l_n_full + 1
+         end
+      end
+
+      return l_n_full
+   end
+
+   function assign_debris_smoke(new_smoke)
+      local n_arr_smokes = #arr_freed_smokes
+
+      if n_arr_smokes > 0 then
+         -- so we have empty slot in arr_freed_smokes
+         arr_debris_smokes[arr_freed_smokes[1]] = new_smoke
+         table.remove(arr_freed_smokes, 1)
+      else
+         -- no vacancies - make new entry into the table
+         table.insert(arr_debris_smokes, new_smoke)
+      end
+   end
+
+   function assign_new_debris_smoke(obj_debris, sig_debris)
+      local temp_smoke = {}
+      local radius = 0
+      local parent_radius = obj_debris.Parent.Class.Model.Radius
+
+      temp_smoke.sig = sig_debris
+      radius = math.pow(parent_radius/100,0.333)
+      temp_smoke.num_plumes = get_number_of_explosions(5*radius)
+      temp_smoke.base_radius = radius * 4
+      temp_smoke.multiplier = 0.0
+      temp_smoke.plume = {}
+      temp_smoke.max_time = 0
+      for j = 1, temp_smoke.num_plumes do
+         if temp_smoke.plume[j] == nil then
+            temp_smoke.plume[j] = {}
+         end
+         temp_smoke.plume[j].pos = nil
+         temp_smoke.plume[j].timer = 0
+         temp_smoke.plume[j].start_time = 0
+         temp_smoke.plume[j].end_timer = 0
+         local l_v_rnd = get_rnd_vector_sphere()
+         local l_c_pos = get_ray_collision_pos_debris(obj_debris, l_v_rnd, 3)
+         temp_smoke.plume[j].pos = l_c_pos
+         temp_smoke.plume[j].timer = f_M_time
+         temp_smoke.plume[j].start_time = f_M_time
+         temp_smoke.plume[j].end_time = f_M_time + parent_radius * (0.05 + math.random() * 0.15)
+         if temp_smoke.plume[j].end_time > temp_smoke.max_time then
+            temp_smoke.max_time = temp_smoke.plume[j].end_time
+         end
+      end
+      assign_debris_smoke(temp_smoke)
+   end
+
+   function check_if_debris_smoke_exists(sig_debris, n_debris_smokes)
+      local n_debris_smokes = #arr_debris_smokes
+
+      for k = 1, n_debris_smokes do
+         if arr_debris_smokes[k].sig == sig_debris then
+            -- so we have a smoke thing for this bit already
+            -- pass it
+            return true
+         end
+      end
+      return false
+   end
+
+   function set_particles_for_debris_smokes()
+      local n_arr_plumes = #arr_debris_smokes
+
+      if n_arr_plumes > 0 then
+         for i = 1, n_arr_plumes do
+            local smokey = arr_debris_smokes[i]
+            local debris = mn.getObjectFromSignature(smokey.sig)
+            local should_be_freed = false
+            if (smokey.max_time > f_M_time) then
+               if debris:isValid() then
+                  local no_plumes = false
+                  for j = 1, smokey.num_plumes do
+                     local f_rnd = math.random()
+                     local smoke = smokey.plume[j]
+                     if smoke.pos ~= nil then
+                        if smoke.end_time > f_M_time then
+                           if smoke.timer <= f_M_time then
+                              local l_pos_vec = debris.Orientation:unrotateVector(smoke.pos)
+                              l_pos_vec = l_pos_vec + debris.Position
+                              local l_r_size = smokey.base_radius * (1  + math.random()*2)
+                              local l_check_timers = (smoke.end_time - f_M_time) / (smoke.end_time - smoke.start_time)
+                              l_check_timers = (1.25 * l_check_timers) + 0.10
+                              if l_check_timers > 1 then
+                                 l_check_timers = 1
+                              end
+                              l_r_size = l_r_size * l_check_timers
+                              ts.createParticle(l_pos_vec,v_null,f_F_time,l_r_size,PARTICLE_BITMAP,-1,false,l_anim_debris)
+                              arr_debris_smokes[i].plume[j].timer = f_M_time + 0.10 + (math.random() * 0.35)
+                           end
+                           no_plumes = false
+                        end
+                     end
+                  end
+                  if no_plumes == true then
+                     -- either no plumes or they have burned out, free it
+                     should_be_freed = true
+                  end
+               end
+            else
+               -- debris piece run out of burn time, free it
+               -- if it has not already been freed
+               if smokey.max_time > 0 then
+                  should_be_freed = true
+               end
+            end
+            if should_be_freed == true then
+               table.insert(arr_freed_smokes,i)
+               arr_debris_smokes[i].max_time = -1
+            end
+         end
+      end
+   end
+
+   function check_and_assign_debris_smoke()
+      local n_debris = #mn.Debris
+
+      -- tool for checking if the debris needs to have smokes
+      -- to be made into functions
+      for i = 1, n_debris do
+         local already_smoking = false
+         local obj_debris = mn.Debris[i]
+
+         if obj_debris.IsHull == true then
+            if obj_debris.Parent:getBreedName() == "Ship" then
+               local sig_debris = obj_debris:getSignature()
+
+               already_smoking = check_if_debris_smoke_exists(sig_debris)
+
+               if already_smoking == false then
+                  assign_new_debris_smoke(obj_debris, sig_debris)
+               end
+            end
+         end
+      end
+   end
+else
+   ba.print("MediaVPs: Debris script override active!\n")
+end
+
+]
+
+$State: GS_STATE_GAME_PLAY
+$On Frame:
+[
+if not mediavps.debrisOverride then
+   --f_M_time = mn.getMissionTime()
+   --f_F_time = ba.getFrametime(true)
+
+   if (f_M_time ~= nil) then
+      if arr_debris_smokes ~= nil then
+         -- check if there are debris
+         -- and if they need to have smokes
+         check_and_assign_debris_smoke()
+         -- actual smoke plume draw section
+         -- also to be functions to make debugging easier
+         set_particles_for_debris_smokes()
+      end
+   end
+end
+]
+
+$Application: FS2_Open
+$On Mission End:
+[
+if not mediavps.debrisOverride then
+   -- kill the arrays...
+   v_null = nil
+   v_rnd_sphere = nil
+   arr_debris_smokes = nil
+   arr_freed_smokes = nil
+   l_anim_debris = nil
+end
+]
+
+#End

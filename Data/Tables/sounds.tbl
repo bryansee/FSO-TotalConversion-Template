@@ -1,0 +1,1288 @@
+#Game Sounds Start
+; Misc sounds section
+
+$Name:	0
+	+Filename: 	HUD_GRW_TrackingLoop
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name:	1
+	+Filename: 	lock
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name:	2
+	+Filename: 	cycle.wav
+    +Preload: no
+    +Volume: 0.60
+    +Priority: High
+
+$Name:	3
+	+Filename: 	cycle.wav
+    +Preload: no
+    +Volume: 0.60
+    +Priority: High
+
+$Name:	4
+	+Filename: 	Engine_GRW_CPGeneric
+    +Preload: no
+    +Volume: 0.30
+    +Priority: High
+
+$Name:	5
+	+Filename: 	revealed
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name:	6
+	+Filename: 	breakup
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 100
+        +Attenuation end: 800
+    +Priority: High
+
+$Name:	7
+	+Filename: 	MV_Boom_3
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 600
+        +Attenuation end: 1200
+    +Priority: High
+
+$Name: 8
+    +Filename: beep_2
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name: 9
+    +Filename: HUD_GRW_ELChange
+    +Preload: no
+    +Volume: 0.50
+    +Priority: High
+
+$Name: 10
+    +Filename: HUD_GRW_ELChangeFail
+    +Preload: no
+    +Volume: 0.50
+    +Priority: High
+
+$Name: 11
+    +Filename: HUD_GRW_ETChange
+    +Preload: no
+    +Volume: 0.50
+    +Priority: High
+
+$Name: 12
+    +Filename: HUD_GRW_ETChangeFail
+    +Preload: no
+    +Volume: 0.50
+    +Priority: High
+
+$Name: 13
+    +Filename: thr_full
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name: 14
+    +Filename: thr_off
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name: 15
+    +Filename: thr_up
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name: 16
+    +Filename: thr_dwn
+    +Preload: no
+    +Volume: 0.40
+    +Priority: High
+
+$Name: 17
+    +Filename: approach
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 800
+    +Priority: High
+
+$Name: 18
+    +Filename: attach
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 800
+    +Priority: High
+
+$Name: 19
+    +Filename: detach
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 800
+    +Priority: High
+
+$Name: 20
+    +Filename: depart
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 800
+    +Priority: High
+
+$Name: 21
+    +Filename: Engine_GRW_ABStart
+    +Preload: no
+    +Volume: 0.70
+
+$Name: 22
+    +Filename: Engine_GRW_ABLoop
+    +Preload: no
+    +Volume: 0.90
+
+$Name: 23
+    +Filename: vaporize2
+    +Preload: no
+    +Volume: 0.90
+
+$Name: 24
+    +Filename: Engine_GRW_ABStop
+    +Preload: no
+    +Volume: 0.50
+
+$Name: 25
+    +Filename: alert_2
+    +Preload: no
+    +Volume: 0.40
+
+$Name: 26
+    +Filename: m_fail
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 27
+    +Filename: l_fail
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 28
+    +Filename: fail
+    +Preload: no
+    +Volume: 0.50
+
+$Name: 29
+    +Filename: beep_1
+    +Preload: no
+    +Volume: 0.50
+
+$Name: 30
+    +Filename: beep_1
+    +Preload: no
+    +Volume: 0.50
+
+$Name: 31
+    +Filename: debris
+    +Preload: no
+    +Volume: 0.40
+    +3D Sound:
+        +Attenuation start: 100
+        +Attenuation end: 300
+    +Priority: High
+
+$Name: 32
+    +Filename: subhit
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 33
+    +Filename: m_load
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 50
+    +Priority: High
+
+$Name: 34
+    +Filename: m_lock
+    +Preload: no
+    +Volume: 0.50
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 50
+    +Priority: High
+
+$Name: 35
+    +Filename: repair
+    +Preload: no
+    +Volume: 0.50
+
+$Name: 36
+    +Filename: l_hit
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 30
+        +Attenuation end: 100
+    +Priority: High
+
+$Name: 37
+    +Filename: m_hit
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 30
+        +Attenuation end: 100
+    +Priority: High
+
+$Name: 38
+    +Filename: cycle
+    +Preload: no
+    +Volume: 0.80
+
+$Name: 39
+    +Filename: s_hit_4
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 600
+    +Priority: High
+
+$Name: 40
+    +Filename: s_hit_2
+    +Preload: no
+    +Volume: 0.80
+    +3D Sound:
+        +Attenuation start: 10
+        +Attenuation end: 100
+    +Priority: High
+
+$Name: 41
+    +Filename: select
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 42
+    +Filename: alert_3
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 43
+    +Filename: beep_4
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 44
+    +Filename: wash
+    +Preload: no
+    +Volume: 0.80
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 400
+    +Priority: High
+
+$Name: 45
+    +Filename: Warp_1
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 700
+        +Attenuation end: 1400
+    +Priority: High
+
+$Name: 46
+    +Filename: Warp_1
+    +Preload: no
+    +Volume: 0.60
+    +3D Sound:
+        +Attenuation start: 700
+        +Attenuation end: 1400
+    +Priority: High
+
+$Name: 47
+    +Filename: aburn_1f
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 48
+    +Filename: static
+    +Preload: no
+    +Volume: 0.60
+
+$Name: 49
+    +Filename: MV_Boom_1
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 600
+        +Attenuation end: 1200
+    +Priority: High
+
+$Name: 50
+    +Filename: HUD_GRW_HyperEngage
+    +Preload: no
+    +Volume: 0.70
+
+$Name: 51
+    +Filename: s_hit_0
+    +Preload: no
+    +Volume: 0.70
+    +3D Sound:
+        +Attenuation start: 100
+        +Attenuation end: 200
+    +Priority: High
+
+$Name: 52
+    +Filename: collide
+    +Preload: no
+    +Volume: 0.70
+    +3D Sound:
+        +Attenuation start: 100
+        +Attenuation end: 200
+    +Priority: High
+
+$Name: 53
+    +Filename: s_hit_1
+    +Preload: no
+    +Volume: 0.70
+    +3D Sound:
+        +Attenuation start: 100
+        +Attenuation end: 200
+    +Priority: High
+
+$Name: 54
+    +Filename: alert_1
+    +Preload: no
+    +Volume: 0.50
+
+$Name: 55
+    +Filename: HUD_GRW_Proximity1
+    +Preload: no
+    +Volume: 0.70
+
+$Name: 56
+    +Filename: HUD_GRW_Proximity2
+    +Preload: no
+    +Volume: 0.70
+
+$Name: 57
+    +Filename: directive
+    +Preload: no
+    +Volume: 0.70
+
+$Name: 58
+    +Filename: subhit2
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 250
+        +Attenuation end: 800
+    +Priority: High
+
+$Name: 59
+    +Filename: MV_Atomic
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 2000
+        +Attenuation end: 4000
+    +Priority: High
+
+$Name: 60
+    +Filename: subhit2
+    +Preload: no
+    +Volume: 0.90
+    +3D Sound:
+        +Attenuation start: 250
+        +Attenuation end: 1500
+    +Priority: High
+
+$Name: 61
+    +Filename: MV_Warp_1
+    +Preload: no
+    +Volume: 1.0
+    +3D Sound:
+        +Attenuation start: 1500
+        +Attenuation end: 2000
+    +Priority: High
+
+$Name: 62
+    +Filename: ast_lghit
+    +Preload: no
+    +Volume: 0.80
+    +3D Sound:
+        +Attenuation start: 750
+        +Attenuation end: 1500
+    +Priority: High
+
+$Name: 63
+    +Filename: ast_smhit
+    +Preload: no
+    +Volume: 0.80
+    +3D Sound:
+        +Attenuation start: 500
+        +Attenuation end: 1000
+    +Priority: High
+
+$Name:	64
+    +Filename: cue_voice
+    +Preload: no
+    +Volume: 0.90
+
+$Name:	65
+    +Filename: end_voice
+    +Preload: no
+    +Volume: 0.90
+
+$Name:	66
+    +Filename: scan
+    +Preload: no
+    +Volume: 0.50
+
+$Name:	67
+    +Filename: l_flyby
+    +Preload: no
+    +Volume: 0.80
+    +3D Sound:
+        +Attenuation start: 50
+        +Attenuation end: 250
+    +Priority: High
+
+$Name:	68
+    +Filename: asteroid
+    +Preload: no
+    +Volume: 0.50
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 700
+    +Priority: High
+
+$Name:	69
+    +Filename: MV_Warp_Open
+    +Preload: no
+    +Volume: 1.00
+    +3D Sound:
+        +Attenuation start: 2000
+        +Attenuation end: 4000
+    +Priority: High
+
+$Name:	70
+    +Filename: MV_Warp_Close
+    +Preload: no
+    +Volume: 1.00
+    +3D Sound:
+        +Attenuation start: 2000
+        +Attenuation end: 4000
+    +Priority: High
+
+$Name:	71
+    +Filename: rumble
+    +Preload: no
+    +Volume: 0.70
+    +3D Sound:
+        +Attenuation start: 600
+        +Attenuation end: 1000
+    +Priority: High
+
+$Name:	72
+    +Filename: subspace_left
+    +Preload: no
+    +Volume: 0.30
+
+$Name:	73
+    +Filename: subspace_right
+    +Preload: no
+    +Volume: 0.30
+
+$Name:	74
+    +Filename: Evaded
+    +Preload: no
+    +Volume: 0.70
+
+$Name:	75
+	+Filename: 	rumble
+    +Preload:	no
+    +Volume: 0.70
+    +3D Sound:
+        +Attenuation start: 600
+        +Attenuation end: 1000
+    +Priority: High
+
+$Name:	76
+	+Filename: 	L_Sidearm
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	77
+	+Filename: 	L_Scalpel
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	78
+	+Filename: 	L_Flail2
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	79
+	+Filename: 	L_Prom_R
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	80
+	+Filename: 	L_Prom_S
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	81
+	+Filename: 	L_Newton
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	82
+	+Filename: 	L_Kayser
+	+Preload: 	no
+	+Volume:	0.55
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	83
+	+Filename: 	L_Circle
+	+Preload: 	no
+	+Volume:	0.55
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	84
+	+Filename: 	L_Lich
+	+Preload: 	no
+	+Volume:	0.55
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	85
+	+Filename: 	Hit_1
+	+Preload: 	no
+	+Volume:	0.90
+	+3D Sound:
+		+Attenuation start:	200
+		+Attenuation end: 800
+
+$Name:	86
+	+Filename: 	L_Vasmid
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	87
+	+Filename: 	M_wasp
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	88
+	+Filename: 	Boom_2
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	500
+		+Attenuation end: 1000
+
+$Name:	89
+	+Filename: 	m_mag
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 900
+
+$Name:	90
+	+Filename: 	m_fury
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	91
+	+Filename: 	m_shrike
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	92
+	+Filename: 	m_angel
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	93
+	+Filename: 	m_cluster
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	94
+	+Filename: 	m_clusterb
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	95
+	+Filename: 	m_stiletto
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	96
+	+Filename: 	m_tsunami
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	97
+	+Filename: 	m_harbinger
+	+Preload: 	no
+	+Volume:	0.80
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	98
+	+Filename: 	m_mega
+	+Preload: 	no
+	+Volume:	0.30
+	+3D Sound:
+		+Attenuation start:	3000
+		+Attenuation end: 100000
+
+$Name:	99
+	+Filename: 	counter_1
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 200
+
+$Name:	100
+	+Filename: 	W_Auth_Spatha
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	101
+	+Filename: 	MV_ClusterBoom
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	750
+		+Attenuation end: 1700
+
+$Name:	102
+	+Filename: 	m_swarm
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	103
+	+Filename: 	W_Auth_Shashka
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	104
+	+Filename: 	capital4
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	500
+		+Attenuation end: 1500
+
+$Name:	105
+	+Filename: 	capital5
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	500
+		+Attenuation end: 1500
+
+$Name:	106
+	+Filename: 	capital6
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	500
+		+Attenuation end: 1500
+
+$Name:	107
+	+Filename: 	l_vaslight
+	+Preload: 	no
+	+Volume:	0.60
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	108
+	+Filename: 	l_alien3
+	+Preload: 	no
+	+Volume:	0.60
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 400
+
+$Name:	109
+	+Filename: 	shockwave
+	+Preload: 	no
+	+Volume:	1.00
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 800
+
+$Name:	110	Turret_T1.wav,			0, 0.50, 2, 200, 1000		; TERRAN TURRET 1
+$Name:	111	Turret_T2.wav,			0, 0.50, 2, 200, 1000		; TERRAN TURRET 2
+$Name:	112	Turret_V1.wav,			0, 0.50, 2, 200, 1000		; VASUDAN TURRET 1
+$Name:	113	Turret_V2.wav,			0, 0.50, 2, 200, 1000		; VASUDAN TURRET 2
+$Name:	114	Turret_S1.wav,			0, 0.50, 2, 200, 1000		; SHIVAN TURRET 1
+$Name:	115	paintloop.wav,			0, 0.60, 1, 50, 200			; targeting laser loop sound
+$Name:	116	FlakLaunch.wav,			0, 0.60, 1, 250, 1000		; Flak Gun Launch
+$Name:	117	boom_4.wav,				0, 0.80, 1, 400, 800		; Flak Gun Impact
+$Name:	118	m_emp.wav,				0, 0.60, 1, 50, 400			; EMP Missle
+$Name:	119	Escape.wav,				0, 0.60, 1, 200, 600		; Escape Pod Drone
+$Name:	120	Vaporize1.wav,			0, 0.70, 0					; Beam Hit 1
+$Name:	121	beam_loop.wav,			0, 0.70, 2, 1500, 3000		; beam loop
+$Name:	122	beam_up.wav,			0, 0.70, 2, 1500, 3000		; beam power up
+$Name:	123	beam_down.wav,			0, 0.70, 2, 1500, 3000		; beam power down
+$Name:	124	beam_shot1.wav,			0, 0.70, 2, 1500, 2500		; Beam shot 1
+$Name:	125	beam_shot2.wav,			0, 0.70, 2, 1500, 2500		; Beam shot 2
+
+; Ship Engine Sounds section
+$Name:	126	ship_a1.wav,			0, 0.60, 1, 200, 400		; Terran fighter engine (3d sound)
+$Name:	127	ship_a2.wav,			0, 0.70, 1, 300, 600		; Terran bomber engine (3d sound)
+$Name:	128	ship_a3.wav,			0, 0.80, 1, 400, 800		; Terran cruiser engine (3d sound)
+$Name:	129	ship_b1.wav,			0, 0.70, 1, 200, 400		; OSA fighter engine (3d sound)
+$Name:	130	ship_b2.wav,			0, 0.80, 1, 300, 600		; Vasudan bomber engine (3d sound)
+$Name:	131	ship_b3.wav,			0, 0.80, 1, 400, 800		; Vasudan cruiser engine (3d sound)
+$Name:	132	ship_c1.wav,			0, 0.60, 1, 200, 400		; Shivan fighter engine (3d sound)
+$Name:	133	ship_c2.wav,			0, 0.70, 1, 300, 600		; Shivan bomber engine (3d sound)
+$Name:	134	ship_c3.wav,			0, 0.80, 1, 400, 800		; Shivan cruiser engine (3d sound)
+$Name:	135	beacon.wav,				0, 0.60, 1, 300, 600		; Repair ship beacon/engine sound (3d sound)
+$Name:	136	capital1.wav,			0, 0.70, 1, 500, 1500		; Terran capital engine (3d sound)
+$Name:	137	capital2.wav,			0, 0.70, 1, 500, 1500		; Vasudan capital engine (3d sound)
+$Name:	138	capital3.wav,			0, 0.70, 1, 500, 1500		; Shivan capital engine (3d sound)
+
+; Electrical arc sound fx on the debris pieces
+$Name:	139	Arc_01.wav,				0, 0.30, 2, 200, 500		; ** 0.10 second spark sound effect (3d sound)
+$Name:	140	Arc_02.wav,				0, 0.30, 2, 200, 500		; ** 0.25 second spark sound effect (3d sound)
+$Name:	141	Arc_03.wav,				0, 0.30, 2, 200, 500		; ** 0.50 second spark sound effect (3d sound)
+$Name:	142	Arc_04.wav,				0, 0.30, 2, 200, 500		; ** 0.75 second spark sound effect (3d sound)
+$Name:	143	Arc_05.wav,				0, 0.30, 2, 200, 500		; ** 1.00 second spark sound effect (3d sound)
+
+; Beam Sounds
+$Name:	144	BT_LTerSlash.wav,		0, 0.70, 2, 1500, 3000		; LTerSlash beam loop
+$Name:	145	BT_TerSlash.wav,		0, 0.70, 2, 1500, 3000		; TerSlash beam loop
+$Name:	146	BT_SGreen.wav,			0, 0.70, 2, 1500, 3000		; SGreen beam loop
+$Name:	147	BT_BGreen.wav,			0, 0.70, 2, 1500, 3000		; BGreen beam loop
+
+$Name:	148	
+    +Filename: W_GRW_BFN_loop
+    +Preload: no
+    +Volume: 0.60
+	+3D Sound:
+		+Attenuation start:	2000
+		+Attenuation end: 3000
+
+$Name:	149	
+    +Filename: W_GRW_AF_loop
+    +Preload: no
+    +Volume: 0.40
+	+3D Sound:
+		+Attenuation start:	2000
+		+Attenuation end: 3000
+
+$Name:	150
+    +Filename: W_GRW_AF_wu
+    +Preload: no
+    +Volume: 0.60
+	+3D Sound:
+		+Attenuation start:	2000
+		+Attenuation end: 3000
+
+$Name:	151	BT_up_1.5.wav,			0, 0.60, 2, 1500, 3000		; 1.5 sec warm up
+$Name:	152	BT_up_2.5.wav,			0, 0.60, 2, 1500, 3000		; 2.5 sec warm up
+$Name:	153	BT_up_3.wav,			0, 0.60, 2, 1500, 3000		; 3 sec warm up
+$Name:	154	BT_up_3.5.wav,			0, 0.60, 2, 1500, 3000		; 3.5 sec warm up
+$Name:	155	BT_up_5.wav,			0, 0.60, 2, 1500, 3000		; 5 sec warm up
+$Name:	156	BT_dwn_1.wav,			0, 0.70, 2, 2000, 3000		; LTerSlash warm down
+$Name:	157	BT_dwn_2.wav,			0, 0.70, 2, 2000, 3000		; TerSlash warm down
+$Name:	158	BT_dwn_3.wav,			0, 0.70, 2, 2000, 3000		; SGreen warm down
+$Name:	159	BT_dwn_4.wav,			0, 0.70, 2, 2000, 3000		; BGreen warm down
+
+$Name:	160	
+    +Filename: W_GRW_BFN_wd
+    +Preload: no
+    +Volume: 0.60
+	+3D Sound:
+		+Attenuation start:	2000
+		+Attenuation end: 3000
+
+$Name:	161	
+    +Filename:	W_GRW_AF_wd
+	+Preload: 	no
+	+Volume:	0.60
+	+3D Sound:
+		+Attenuation start:	400
+		+Attenuation end: 800
+
+$Name:	162	Empty,					0, 0.50, 0
+$Name:	163	Empty,					0, 0.50, 0
+$Name:	164	Empty,					0, 0.50, 0
+$Name:	165	Empty,					0, 0.50, 0
+$Name:	166	Empty,					0, 0.50, 0
+$Name:	167	Empty,					0, 0.50, 0
+$Name:	168	Empty,					0, 0.50, 0
+$Name:	169	Empty,					0, 0.50, 0
+$Name:	170	Empty,					0, 0.50, 0
+$Name:	171	Empty,					0, 0.50, 0
+
+$Name:	172	Empty,					0, 0.50, 0
+$Name:	173	SupNova1.wav,			0, 1.00, 0					; SuperNova (distant)
+$Name:	174	SupNova2.wav,			0, 1.00, 0					; SuperNova (shockwave)
+$Name:	175	ship_c4.wav,			0, 0.80, 1, 400, 800		; Shivan large engine (3d sound)
+$Name:	176	ship_c5.wav,			0, 0.80, 1, 400, 1000		; Shivan large engine (3d sound)
+$Name:	177	BS_SRed.wav,			0, 0.70, 2, 1500, 3000		; SRed 		beam loop
+$Name:	178	BS_LRed.wav,			0, 0.70, 2, 1500, 3000		; LRed		beam loop
+$Name:	179	BS_AntiFtr.wav,			0, 0.70, 2, 1500, 3000		; Antifighter	beam loop
+$Name:	180	MV_Thunder_01.ogg,		0, 0.70, 0					; Thunder 1 sound in neblua
+$Name:	181	MV_Thunder_02.ogg,		0, 0.70, 0					; Thunder 2 sound in neblua
+$Name:	182	BS_up_1.wav,			0, 0.60, 2, 1500, 3000		; 1 sec 	warm up
+$Name:	183	BS_up_1.5.wav,			0, 0.60, 2, 1500, 3000		; 1.5 sec 	warm up
+$Name:	184	BS_up_3.wav,			0, 0.60, 2, 1500, 3000		; 3 sec 	warm up
+$Name:	185	Commnode.wav,			0, 0.60, 1, 200,  500		; Shivan Commnode
+$Name:	186	Pirate.wav,				0, 0.60, 1, 400,  1000		; Volition PirateShip
+$Name:	187	BS_dwn_1.wav,			0, 0.70, 2, 2000, 3000		; SRed 		warm down
+$Name:	188	BS_dwn_2.wav,			0, 0.70, 2, 2000, 3000		; LRed 		warm down
+$Name:	189	BS_dwn_3.wav,			0, 0.70, 2, 2000, 3000		; AntiFtr	warm down
+$Name:	190	Inst1.wav,				0, 0.80, 1, 500, 2000		; Instellation 1
+$Name:	191	Inst2.wav,				0, 0.80, 1, 500, 2000		; Instellation 2
+
+; Empty
+$Name:	192	Empty,				0, 0.50, 0
+$Name:	193	Empty,				0, 0.50, 0
+$Name:	194	Empty,				0, 0.50, 0
+$Name:	195	Empty,				0, 0.50, 0
+$Name:	196	Empty,				0, 0.50, 0
+$Name:	197	Empty,				0, 0.50, 0
+$Name:	198	Empty,				0, 0.50, 0
+$Name:	199	Empty,				0, 0.50, 0
+$Name:	200	Empty,				0, 0.50, 0
+$Name:	201	Empty,				0, 0.50, 0
+$Name:	202	Empty,				0, 0.50, 0
+$Name:	203	Empty,				0, 0.50, 0
+$Name:	204	Empty,				0, 0.50, 0
+$Name:	205	Empty,				0, 0.50, 0
+$Name:	206	Empty,				0, 0.50, 0
+$Name:	207	Empty,				0, 0.50, 0
+$Name:	208	Empty,				0, 0.50, 0
+$Name:	209	Empty,				0, 0.50, 0
+$Name:	210	Empty,				0, 0.50, 0
+$Name:	211	Empty,				0, 0.50, 0
+$Name:	212	Empty,				0, 0.50, 0
+$Name:	213	Empty,				0, 0.50, 0
+$Name:	214	Empty,				0, 0.50, 0
+$Name:	215	Empty,				0, 0.50, 0
+$Name:	216	Empty,				0, 0.50, 0
+$Name:	217	Empty,				0, 0.50, 0
+$Name:	218	Empty,				0, 0.50, 0
+$Name:	219	Empty,				0, 0.50, 0
+$Name:	220	Empty,				0, 0.50, 0
+$Name:	221	Empty,				0, 0.50, 0
+$Name:	222	Empty,				0, 0.50, 0
+$Name:	223	Empty,				0, 0.50, 0
+$Name:	224	Empty,				0, 0.50, 0
+$Name:	225	Empty,				0, 0.50, 0
+$Name:	226	Empty,				0, 0.50, 0
+$Name:	227	Empty,				0, 0.50, 0
+$Name:	228	Empty,				0, 0.50, 0
+$Name:	229	Empty,				0, 0.50, 0
+$Name:	230	Empty,				0, 0.50, 0
+$Name:	231	Empty,				0, 0.50, 0
+$Name:	232	Empty,				0, 0.50, 0
+$Name:	233	Empty,				0, 0.50, 0
+$Name:	234	Empty,				0, 0.50, 0
+$Name:	235	Empty,				0, 0.50, 0
+$Name:	236	Empty,				0, 0.50, 0
+$Name:	237	Empty,				0, 0.50, 0
+$Name:	238	Empty,				0, 0.50, 0
+$Name:	239	Empty,				0, 0.50, 0
+$Name:	240	Empty,				0, 0.50, 0
+$Name:	241	Empty,				0, 0.50, 0
+$Name:	242	Empty,				0, 0.50, 0
+$Name:	243	Empty,				0, 0.50, 0
+$Name:	244	Empty,				0, 0.50, 0
+$Name:	245	Empty,				0, 0.50, 0
+$Name:	246	Empty,				0, 0.50, 0
+$Name:	247	Empty,				0, 0.50, 0
+$Name:	248	Empty,				0, 0.50, 0
+$Name:	249	Empty,				0, 0.50, 0
+
+; Turret rotation and elevation
+$Name:	250
+	+Filename: 	smallturret_rot
+	+Preload: 	no
+	+Volume:	0.40
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 100
+
+$Name:	251
+	+Filename: 	smallturret_elev
+	+Preload: 	no
+	+Volume:	0.40
+	+3D Sound:
+		+Attenuation start:	50
+		+Attenuation end: 100
+
+$Name:	252
+	+Filename: 	smallturret_rot
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	100
+		+Attenuation end: 200
+
+$Name:	253
+	+Filename: 	smallturret_elev
+	+Preload: 	no
+	+Volume:	0.50
+	+3D Sound:
+		+Attenuation start:	100
+		+Attenuation end: 200
+
+$Name:	254
+	+Filename: 	largeturret_rot
+	+Preload: 	no
+	+Volume:	0.60
+	+3D Sound:
+		+Attenuation start:	200
+		+Attenuation end: 400
+
+$Name:	255
+	+Filename: 	largeturret_elev
+	+Preload: 	no
+	+Volume:	0.60
+	+3D Sound:
+		+Attenuation start:	200
+		+Attenuation end: 400
+
+$Name:	256
+	+Filename: 	largeturret_rot
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	400
+		+Attenuation end: 800
+
+$Name:	257
+	+Filename: 	largeturret_elev
+	+Preload: 	no
+	+Volume:	0.70
+	+3D Sound:
+		+Attenuation start:	400
+		+Attenuation end: 800
+
+; Radar sounds
+
+$Name:	293
+	+Filename: 	HUD_GRW_RadarLoop
+	+Preload: 	no
+	+Volume:	0.50
+
+$Name:	294
+	+Filename: 	HUD_GRW_RadarDepart
+	+Preload: 	no
+	+Volume:	1.00
+
+$Name:	295
+	+Filename: 	HUD_GRW_RadarIncoming
+	+Preload: 	no
+	+Volume:	1.00
+
+#Game Sounds End
+
+#Interface Sounds Start
+
+$Name:	0
+	+Filename: 	UI_MouseClick
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	2
+	+Filename: 	UI_ShipLoad
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name:	3
+	+Filename: 	UI_ShipUnload
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name:	4
+	+Filename: 	UI_BriefPress
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	5
+	+Filename: 	UI_NewScreen
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	6
+	+Filename: 	UI_Help
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	7
+	+Filename: 	UI_Commit
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name:	8
+	+Filename: 	UI_PrevNext
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	9
+	+Filename: 	UI_Scroll
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	10
+	+Filename: 	UI_Fail
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	11
+	+Filename: 	shipview
+	+Preload: 	no
+	+Volume:	0.50
+
+$Name:	12
+	+Filename: 	MH_GRW_Ambient
+	+Preload: 	no
+	+Volume:	0.40
+
+$Name:	13
+	+Filename: 	MH_OSA_Ambient
+	+Preload: 	no
+	+Volume:	0.40
+
+$Name:	14
+	+Filename: 	UI_BSChange
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	15
+	+Filename: 	UI_BSChangeFail
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	16
+	+Filename: 	UI_SelectBriefIcon
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	17
+	+Filename: 	UI_UserOver
+	+Preload: 	no
+	+Volume:	0.50
+
+$Name:	18
+	+Filename: 	UI_UserClick
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	19
+	+Filename: 	UI_Reset
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	20
+	+Filename: 	UI_TextAppear
+	+Preload: 	no
+	+Volume:	0.60
+
+$Name: 22
+   +Filename: weapview
+   +Preload: No
+   +Volume: 0.60
+
+$Name: 23
+   +Filename: MH_GRW_SlideDoorOpen
+   +Preload: No
+   +Volume: 0.75
+
+$Name: 24
+   +Filename: MH_GRW_SlideDoorClose
+   +Preload: No
+   +Volume: 0.75
+
+$Name:	28
+	+Filename: 	UI_PopupBox1
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name:	29
+	+Filename: 	UI_PopupBox2
+	+Preload: 	no
+	+Volume:	0.70
+
+$Name: 30
+   +Filename: 1_yes
+   +Preload: No
+   +Volume: 1.00
+
+$Name: 32
+   +Filename: MH_GRW_ScreenOn2
+   +Preload: No
+   +Volume: 0.45
+
+$Name: 34
+   +Filename: MH_GRW_TechDoorOpen
+   +Preload: No
+   +Volume: 0.95
+
+$Name: 35
+   +Filename: MH_GRW_TechDoorClose
+   +Preload: No
+   +Volume: 0.95
+
+$Name: 36
+   +Filename: MH_GRW_ElevatorUp
+   +Preload: No
+   +Volume: 0.85
+
+$Name: 37
+   +Filename: MH_GRW_ElevatorDown
+   +Preload: No
+   +Volume: 0.85
+
+$Name: 38
+   +Filename: MH_GRW_PA_1
+   +Preload: No
+   +Volume: 0.50
+
+$Name: 39
+   +Filename: MH_GRW_PA_2
+   +Preload: No
+   +Volume: 0.50
+
+$Name: 40
+   +Filename: MH_GRW_PA_3
+   +Preload: No
+   +Volume: 0.50
+
+$Name:	41
+	+Filename: 	UI_Highlight
+	+Preload: 	no
+	+Volume:	0.40
+
+$Name:	42
+	+Filename: 	UI_BriefSwitch
+	+Preload: 	no
+	+Volume:	0.40
+
+#Interface Sounds End
+
+#Flyby Sounds Start
+
+$GRW: 0
+    +Filename: V_flyby1
+    +Preload: no
+    +Volume: 0.85
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 400
+
+$GRW: 1
+    +Filename: V_flyby2
+    +Preload: no
+    +Volume: 0.85
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 400
+
+$Ilarhukian: 0
+    +Filename: S_flyby1
+    +Preload: no
+    +Volume: 0.75
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 400
+
+$Ilarhukian: 1
+    +Filename: S_flyby2
+    +Preload: no
+    +Volume: 0.75
+    +3D Sound:
+        +Attenuation start: 200
+        +Attenuation end: 400
+
+#Flyby Sounds End
